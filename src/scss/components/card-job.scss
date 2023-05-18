@@ -1,0 +1,96 @@
+.card-job {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 40px;
+  background-color: $color-primary;
+
+  @include tablet {
+    padding: 29px 20px 20px 20px;
+  }
+
+  @include desktop {
+    padding: 50px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-family: $font-primary;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $color-white;
+
+    @include tablet {
+      margin-bottom: 16px;
+    }
+
+    @include desktop {
+      max-width: 400px;
+      margin-bottom: 31px;
+      font-size: 26px;
+      line-height: 38px;
+      letter-spacing: 2.6px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+
+    @include desktop {
+      margin-bottom: 31px;
+    }
+  }
+
+  &__row {
+    margin-bottom: 20px;
+
+    @include desktop {
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__unit,
+  &__value {
+    display: inline-block;
+    font-family: $font-primary;
+    line-height: normal;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    color: $color-white;
+
+    @include desktop {
+      font-size: 16px;
+      letter-spacing: 1.6px;
+    }
+  }
+
+  &__unit {
+    margin-right: 5px;
+    font-weight: 700;
+  }
+
+  &__description {
+    margin-bottom: auto;
+  }
+
+  &__text {
+    font-family: $font-secondary;
+    font-size: 14px;
+    line-height: 19px;
+    color: $color-white;
+
+    @include desktop {
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+section.section.main-life.background-default
+  picture.main-life__bg
+    source(srcset="./images/life-scs-bg-desk.jpg" type="image/png" media="(min-width: 768px)")
+    img(src="./images/life-scs-bg.jpg" alt="")
+  .container
+    h1.h1.h1--small.text-center Life at scs jv
+    +life-slider({
+      slides: [
+        {
+          about: "Our shared attitudes and beliefs help us to achieve our goals and ensure we leave a legacy for our industry and the communities around us.",
+          benefits: [
+            {
+              src: "./images/benefits-icon/love-life.svg",
+              title: "Love for life"
+            },
+            {
+              src: "./images/benefits-icon/one-team.svg",
+              title: "One team spirit"
+            },
+            {
+              src: "./images/benefits-icon/excellence.svg",
+              title: "Passionate about excellence"
+            },
+            {
+              src: "./images/benefits-icon/leadership.svg",
+              title: "Leadership"
+            },
+            {
+              src: "./images/benefits-icon/respect.svg",
+              title: "Act with intengrity and respect"
+            }
+          ]
+        },
+        {
+          src: "./images/benefits-icon/love-life.svg",
+          title: "Love for life",
+          desc: "We take care and responsibility for the wellbeing of the HS2 family, our people, our families, and the communities and environment in which we work – now and in the future. We work safely or not at all."
+        },
+        {
+          src: "./images/benefits-icon/one-team.svg",
+          title: "One team spirit",
+          desc: "We work collaboratively as one team towards a common goal. We build trusting relationships by communicating clearly and honestly. We celebrate diversity in our team, recognising and rewarding our people for effort and achievement."
+        },
+        {
+          src: "./images/benefits-icon/excellence.svg",
+          title: "Passionate about excellence",
+          desc: "We support each other to do things right first time. We strive to continuously improve and learn lessons. We are open to new ideas. We work with our people and our supply chain to innovate and embrace new technology."
+        },
+        {
+          src: "./images/benefits-icon/leadership.svg",
+          title: "Leadership",
+          desc: "We empower all our staff to lead by example. We are what we do, not just what we say. We will create a high-performing environment where our people feel engaged and motivated to do their best work."
+        },
+        {
+          src: "./images/benefits-icon/respect.svg",
+          title: "Act with intengrity and respect",
+          desc: "We hold ourselves to account and always do the right thing. We create an ethical and open culture. We are mindful of our actions and consider their impact on others. We resolve conflict by acting flexibly, listening and being open-minded."
+        }
+      ]
+    })
+

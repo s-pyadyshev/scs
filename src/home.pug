@@ -1,0 +1,16 @@
+extends pug/base
+
+prepend vars
+  - title = 'Homepage'
+
+append vars
+  //-
+
+block content
+  +search()
+  include pug/components/welcome.pug
+  include pug/components/partnership.pug
+  include pug/components/main-video.pug
+  include pug/components/innovation.pug
+  include pug/components/project.pug
+  include pug/components/jobs.pug

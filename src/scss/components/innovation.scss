@@ -1,0 +1,23 @@
+.innovation {
+    &.section {
+        padding-top: 0;
+    }
+    h4.h4 {
+
+        @include desktop {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__text {
+
+        @include tablet {
+            column-count: 2;
+            column-gap: 40px;
+        }
+
+        @include desktop {
+            column-gap: 122px;
+        }
+    }
+}

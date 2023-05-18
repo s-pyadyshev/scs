@@ -1,0 +1,41 @@
+section.section.background-default
+  .container
+    h2.h2.text-center PROJECT FACTS AND FIGURES
+    +cardsSlider(
+      {
+        facts: true,
+        items: [
+          {
+            title: '800 METRES OF WASTE-REMOVAL TUNNELS',
+            src: '/images/sprites/svg/metres.svg',
+            text: [
+              {
+                content: 'A&nbsp;dedicated logistics tunnel will remove 20&nbsp;lorries a&nbsp;day from London&rsquo;s roads'
+              }
+            ]
+          },
+          {
+            title: '13<br> VENTILATION SHAFTS',
+            src: '/images/sprites/svg/ventilation.svg',
+            text: [
+              {
+                content: 'Each vent has 2&nbsp;shafts to&nbsp;minimise earth movements and is&nbsp;22m high by&nbsp;13m diameter'
+              }
+            ]
+          },
+          {
+            title: '30,000 WORKERS',
+            src: '/images/sprites/svg/workers.svg',
+            text: [
+              {
+                content: 'From site surveyors to&nbsp;engineers, we&nbsp;employ people from all industries and backgrounds'
+              }
+            ]
+          }
+        ]
+      }
+    )
+    div.ma
+      button.button.button--inverse.text-left(type="button")
+        span WHY WORK HERE
+        +svg('arrow-right')

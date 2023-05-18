@@ -1,0 +1,81 @@
+.navbar {
+  z-index: -1;
+  position: fixed;
+  top: 85px;
+  left: 0;
+  width: 100vw;
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition-duration;
+  -webkit-overflow-scrolling: touch;
+  flex-shrink: 0;
+
+  @include laptop {
+    position: static;
+    width: auto;
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+  }
+
+  &__link {
+    display: block;
+    font-family: $font-secondary;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    color: $color-white;
+    text-decoration: none;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 22px;
+
+    @include laptop {
+      font-size: 16px;
+      line-height: 19px;
+      border-bottom: none;
+      padding: 0;
+      letter-spacing: 1.6px;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-secondary;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+
+    @include laptop {
+      flex-direction: row;
+      gap: 60px;
+    }
+
+    li {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background-color: $color-primary-dark;
+      border-bottom: 1px solid $color-white;
+
+      @include laptop {
+        width: auto;
+        background-color: transparent;
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.mobile-menu-active {
+  .navbar {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+  }
+}

@@ -1,0 +1,27 @@
+header.header
+  .container
+    .header__inner
+      a.logo(href="/home.html")
+        img(src="images/logo.svg" alt="alt.")
+      +navbar(
+        [
+          {
+            text: "The Joint Venture",
+            active: true,
+            href: "/joint-venture.html"
+          },
+          {
+            text: "Life at SCS",
+             href: "/life-at-scs.html"
+          },
+          {
+            text: "Jobs",
+             href: "/jobs.html"
+          }
+        ]
+      )
+      .header__menu-toggle
+        button.menu-toggle-open.js-toggle-menu(type="button")
+          +svg("menu")
+        button.menu-toggle-close.js-toggle-menu(type="button")
+          +svg("close")

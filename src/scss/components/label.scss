@@ -1,0 +1,19 @@
+$label-color: $color-black;
+$label-font-size: 20px;
+$label-font-size-desktop: 30px;
+
+.label {
+  display: block;
+  font-family: $font-secondary;
+  font-size: $label-font-size;
+  line-height: 1.7;
+  color: $label-color;
+
+  &.text-white {
+    color: $color-white;
+  }
+
+  @include laptop {
+    font-size: $label-font-size-desktop;
+  }
+}

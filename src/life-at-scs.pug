@@ -1,0 +1,11 @@
+extends pug/base
+
+prepend vars
+  - title = 'Life at SCS'
+
+append vars
+  //-
+
+block content
+  +search()
+  include pug/components/main-life.pug

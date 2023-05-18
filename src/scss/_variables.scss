@@ -1,0 +1,77 @@
+// stylelint-disable scss/dollar-variable-empty-line-before
+
+// Fonts
+// stylelint-disable-next-line
+$font-primary: "OpenSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font-secondary: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font-weight: 300;
+$line-height: 1.4;
+$font-size: 14px;
+$font-size-desktop: 16px;
+
+// Colors
+$color-black: #000;
+$color-white: #fff;
+$color-muted: #ededed;
+$color-gray: #808080;
+$color-dark-gray: #4a4a49;
+$color-light-gray: #a7a6a6;
+$color-sky-blue: #b5d2f0;
+
+// Primary - Secondary
+$color-primary: #1e3773;
+$color-secondary: #ee7531;
+$color-primary-dark: #0f1b39;
+$color-primary-light: #00b2e9;
+
+// Forms
+$input-font-size: 14px;
+$input-font-size-desktop: 16px;
+$input-border-width: 1px;
+$input-border-color: $color-muted;
+$input-border-color-hover: $color-primary;
+$input-border-radius: 0px;
+$input-icon-width: 32px;
+$input-padding-x: 9px;
+$input-padding-y: 11px;
+$input-padding-x-desktop: 13px;
+$input-padding-y-desktop: 20px;
+$input-padding: $input-padding-x $input-padding-y;
+$input-padding-desktop: $input-padding-x-desktop $input-padding-y-desktop;
+$input-hint-font-size: 14px;
+$input-padding-icon-x: $input-icon-width + $input-padding-x;
+$input-padding-icon-x-desktop: $input-icon-width + $input-padding-x-desktop;
+$input-color: $color-primary;
+
+// Global cosmetic styles
+$overlay: rgba(0, 0, 0, 0.2);
+
+// Sections
+$section-padding-vertical: 40px;
+$section-padding-vertical-desktop: 80px;
+
+// Easing transitions
+$transition-duration: 0.2s;
+
+// Settings
+$tablet: 768; // Tablets, Ipads (portrait) - from 768px to higher
+$laptop: 1025; // Laptops, Desktops - from 1025px to higher
+$desktop: 1366; // Desktops = 1366px to higher resolution desktops
+$desktop-l: 1920;
+
+// Bootstrap overrides
+// scss-docs-end grid-breakpoints
+$grid-gutter-width: 16px;
+
+$container-padding-x: 70px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1025px,
+  xl: 1366px,
+  xxl: 1920px,
+) !default;

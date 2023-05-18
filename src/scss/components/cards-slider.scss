@@ -1,0 +1,42 @@
+.cards-slider {
+  &--primary-light {
+    background-color: $color-sky-blue;
+    .cards-slider {
+      &__inner {
+        background-color: $color-black;
+      }
+    }
+  }
+
+  &__inner {
+    height: auto;
+  }
+
+  &__item {
+    display: flex;
+    align-items: stretch;
+    flex-shrink: 0;
+    width: 100%;
+    min-height: 320px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    @include laptop {
+      min-height: 295px;
+    }
+
+    @include desktop {
+      min-height: 300px;
+    }
+  }
+
+  &__pagination {
+    position: static;
+    padding: 10px 30px 30px;
+
+    @include laptop {
+      display: none;
+    }
+  }
+}

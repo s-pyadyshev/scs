@@ -1,0 +1,182 @@
+.search {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 4;
+
+  @include desktop {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__job-title {
+    .input {
+
+      @include tablet {
+        padding: 9px 20px;
+      }
+
+      @include desktop {
+        padding: 13px 20px;
+      }
+    }
+  }
+}
+
+.search__form {
+  display: none;
+  gap: 16px;
+  opacity: 0;
+  z-index: -1;
+
+  & > .button {
+    min-width: 186px;
+    font-size: 12px;
+    line-height: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    min-height: 40px;
+
+    @include tablet {
+      padding-right: 20px;
+    }
+
+    @include desktop {
+      min-width: 260px;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  @include tablet {
+    opacity: 1;
+    display: grid;
+    z-index: 1;
+    grid-template-columns: 2fr 3fr auto;
+  }
+
+  @include desktop {
+    grid-template-columns: 3fr 2fr auto;
+  }
+
+  &.active {
+    opacity: 1;
+    display: grid !important;
+    z-index: 3;
+  }
+}
+
+.search.advanced {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  .search__job-title {
+    grid-area: title;
+  }
+
+  .search__area {
+    grid-area: area;
+  }
+
+  .search__submit {
+    grid-area: submit;
+  }
+
+  .search__location {
+    grid-area: location;
+  }
+
+  .search__job-type {
+    grid-area: type;
+  }
+
+  .search__company {
+    grid-area: company;
+  }
+
+  .search__quiz {
+    grid-area: quiz;
+  }
+
+  .search__form {
+    opacity: 1;
+    display: grid;
+    grid-template-areas:
+      "title title"
+      "area area"
+      "location type"
+      "company company"
+      "submit submit"
+      "quiz quiz ";
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: end;
+
+    @include tablet {
+      grid-template-areas:
+        "title title area area"
+        "location type company company"
+        "quiz quiz submit submit";
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @include desktop {
+      grid-template-areas:
+        "title title area area submit"
+        "location type company quiz quiz";
+      grid-template-columns: [title] calc(25% - 8px) [title] calc(25% - 8px) [area] 1fr [area] 1fr [submit] auto;
+      gap: 40px 16px;
+    }
+  }
+}
+
+.search__select {
+  width: 100%;
+
+  &.button {
+    font-size: 12px;
+    min-width: 200px;
+    min-height: 40px;
+    padding-top: 12px;
+    padding-right: 20px;
+    padding-bottom: 12px;
+    text-align: center;
+
+    &:hover,
+    &:active,
+    &:focus {
+      &::after {
+        border-color: $color-secondary transparent transparent transparent;
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 11px 8px 0;
+    border-color: $color-white transparent transparent transparent;
+    margin: auto 0;
+    transition: $transition-duration;
+    z-index: 1;
+  }
+
+  &.active {
+    margin-bottom: 16px;
+
+    &:after {
+      transform: rotate(-180deg);
+    }
+  }
+
+  @include tablet {
+    display: none;
+  }
+}

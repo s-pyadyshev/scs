@@ -1,0 +1,139 @@
+.select-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 16px;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  &::after {
+    content: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 136px;
+    margin: auto 0;
+    width: 2px;
+    height: 30px;
+    background-color: $color-light-gray;
+    z-index: 1;
+
+    @include tablet {
+      content: "";
+      right: 118px;
+    }
+
+    @include desktop {
+      right: 161px;
+    }
+  }
+
+  input {
+    width: 100%;
+    border-radius: 0;
+    border-right: none;
+    margin: 0;
+
+    &::placeholder {
+      color: $color-dark-gray;
+    }
+
+    &:focus,
+    &:active {
+      & ~ .select ~ .fsb-select {
+        border-color: $color-primary;
+      }
+    }
+
+    @include tablet {
+      padding: 9px 20px;
+    }
+
+    @include desktop {
+      padding: 13px 20px;
+    }
+  }
+
+  .select ~ .fsb-select {
+    min-width: 136px;
+    background-color: $color-white;
+    border-radius: 0;
+    border: 1px solid $color-muted;
+    border-left: none;
+    width: 100%;
+
+    @include tablet {
+      width: auto;
+      min-width: 118px;
+    }
+
+    @include desktop {
+      min-width: 161px;
+    }
+
+    .fsb-button {
+      font-size: 16px !important;
+      font-weight: 400;
+      color: $color-dark-gray !important;
+      padding-left: 24px !important;
+      transition: 0s;
+      text-transform: none;
+      padding: 10px 25px 10px 11px !important;
+
+      @include tablet {
+        padding: 9px 25px 9px 11px !important;
+        line-height: 20px;
+      }
+
+      @media (min-width: 1024px) {
+        padding-left: 20px !important;
+      }
+
+      @include laptop {
+        line-height: 22px;
+      }
+
+      @include desktop {
+        padding: 13px 25px 13px 20px !important;
+      }
+
+      &::after {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 7.5px 0;
+        border-color: $color-light-gray transparent transparent transparent;
+        transform: none;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+
+        @include tablet {
+          right: 10px;
+        }
+      }
+    }
+
+    .fsb-list {
+      background-color: $color-white;
+    }
+
+    .fsb-option {
+      font-weight: 400;
+      color: $color-gray;
+    }
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    input,
+    .select ~ .fsb-select {
+      border-color: $color-primary;
+    }
+  }
+}

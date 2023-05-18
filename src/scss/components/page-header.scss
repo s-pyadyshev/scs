@@ -1,0 +1,51 @@
+.page-header {
+  display: flex;
+  align-items: center;
+  font-family: $font-secondary;
+  color: $color-white;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  min-height: 240px;
+  background-color: $color-primary;
+
+  @include laptop {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  h1 {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 36px;
+    letter-spacing: -1.5px;
+
+    @include laptop {
+      font-size: 70px;
+      line-height: 55px;
+      letter-spacing: -3.5px;
+    }
+  }
+
+  p {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 0;
+
+    @include laptop {
+      font-size: 30px;
+      line-height: 55px;
+    }
+  }
+
+  img {
+    height: 42px;
+
+    @include laptop {
+      height: 84px;
+    }
+  }
+}

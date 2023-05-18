@@ -1,0 +1,18 @@
+section.section.welcome.background-default
+  .welcome__inner
+    .welcome__line
+      img(src="../../images/decor-vertical-line.svg" alt="")
+    picture.welcome__background
+      source(srcset="../../images/welcome-bg.jpg" type="image/jpeg" media="(min-width: 768px)")
+      img(src="../../images/welcome-bg-mobile.jpg" alt="")
+    .container
+      .welcome__wrap
+        h1.h1
+          span(data-first-title-word) FREEDOM TO 
+          span(data-other-title-words).text-center ACHIEVE THE 
+            | EXTRAORDINARY
+        .welcome__description
+          p The biggest breakthroughs happen when the best minds are encouraged to think for themselves. We want you to be one of them.
+        a.button.button--inverse.full-width(href="/" title="")
+          | DISCOVER CAREERS AT SCS JV
+          +svg("arrow-down")

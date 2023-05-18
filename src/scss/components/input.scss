@@ -1,0 +1,96 @@
+.input {
+  font-size: $input-font-size;
+  line-height: 20px;
+  padding: $input-padding;
+  border-width: $input-border-width;
+  border-style: solid;
+  border-color: $input-border-color;
+  border-radius: $input-border-radius;
+  background-color: $color-white;
+  color: $input-color;
+
+  @include laptop {
+    font-size: $input-font-size-desktop;
+    line-height: 22px;
+    padding: $input-padding-desktop;
+  }
+
+  &:focus {
+    border-color: $input-border-color-hover;
+  }
+
+  &:hover {
+    border-color: $input-border-color-hover;
+  }
+
+  &:active {
+    border-color: $input-border-color-hover;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &::placeholder {
+    font-weight: 300;
+    font-size: 16px;
+    color: $color-dark-gray;
+    opacity: 1;
+  }
+
+  &[disabled] {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .background-secondary & {
+    color: $color-black;
+  }
+}
+
+.input-hint {
+  font-size: $input-hint-font-size;
+}
+
+.input.input-file {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 9px 32px;
+  font-family: $font-secondary;
+  font-size: 16px;
+  font-weight: 600;
+  border-color: $color-secondary;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: $color-white;
+  transition-property: background-color color border-color;
+  transition-duration: $transition-duration;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $color-secondary;
+    color: $color-white;
+    border-color: $color-secondary;
+    transition-property: background-color color border-color;
+    transition-duration: $transition-duration;
+
+    .background-secondary & {
+      background-color: $color-primary;
+      color: $color-white;
+      border-color: $color-primary;
+    }
+  }
+
+  svg {
+    width: 24px;
+    height: 30px;
+    fill: $color-white;
+  }
+
+  .background-secondary & {
+    border-color: $color-white;
+  }
+}

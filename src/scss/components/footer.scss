@@ -1,0 +1,90 @@
+.footer {
+  padding: 70px 0 40px;
+  border-top: 2px solid $color-white;
+
+  @include tablet {
+    padding: 40px 0;
+  }
+
+  @include laptop {
+    padding: 71px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include laptop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+
+    @include laptop {
+      flex-direction: row;
+    }
+
+    & a {
+      font-family: $font-secondary;
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: 500;
+      text-align: center;
+      color: $color-white;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      @include laptop {
+        font-size: 16px;
+        line-height: 19px;
+        text-align: left;
+        margin-left: 30px;
+      }
+
+      @include laptop {
+        margin-left: 48px;
+      }
+
+      &:focus,
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 25px;
+
+        @include laptop {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    margin-bottom: 22px;
+
+    .logo {
+      display: block;
+      max-width: 321px;
+      width: 100%;
+      height: auto;
+      margin: 0;
+
+      @include desktop {
+        width: 536px;
+        max-width: none;
+      }
+    }
+
+    @include laptop {
+      margin-bottom: 0;
+    }
+  }
+}

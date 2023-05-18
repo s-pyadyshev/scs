@@ -1,0 +1,18 @@
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; // fallback
+  // stylelint-disable-next-line
+  min-height: var(--vh);
+  height: 100%;
+  background-color: $color-white;
+}
+
+.header,
+.footer {
+  flex-shrink: 0;
+}
+
+.main {
+  flex-grow: 1;
+}

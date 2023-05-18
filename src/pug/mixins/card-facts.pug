@@ -1,0 +1,8 @@
+mixin cardFacts(data)
+  .card-facts
+    .card-facts__icon
+      img(src= data.src title="" alt="")
+    h4.card-facts__title !{data.title}
+    .card-facts__content
+      each text in data.text
+        p.card-facts__text !{text.content}

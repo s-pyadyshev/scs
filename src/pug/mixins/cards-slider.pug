@@ -1,0 +1,16 @@
+mixin cardsSlider(data)
+  .cards-slider( class = data.modification).swiper.js-cards-slider
+    .cards-slider__inner.swiper-wrapper
+      if data.company == true
+        each item in data.items
+          .cards-slider__item.swiper-slide
+            +cardCompany(item)
+      else if data.job == true
+        each item in data.items
+          .cards-slider__item.swiper-slide
+            +cardJob(item)
+      else if data.facts == true
+        each item in data.items
+          .cards-slider__item.swiper-slide
+            +cardFacts(item)
+    .swiper-pagination.pagination.pagination--inverse.cards-slider__pagination

@@ -1,0 +1,11 @@
+mixin cardCompany(data)
+  .card-company
+    .card-company__logo
+      img(src= data.src title="" alt="")
+    h3.card-company__title= data.title
+    .card-company__content
+      each text in data.text
+        p !{text.content}
+    button.button.button--inverse.button--inverse-secondary.text-left(type="button")
+      span= data.button
+      +svg('arrow-right')

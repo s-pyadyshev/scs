@@ -1,0 +1,31 @@
+mixin life-slider(data)
+  .life-slider
+    .life-slider__bg
+      img(src="./images/life-slider-bg.jpg" alt="")
+    .life-slider__wrapper
+      .life-slider__inner.swiper.js-life-slider
+        .life-slider__title Our values
+        .swiper-wrapper
+          each slide in data.slides
+            .swiper-slide
+              if slide.about
+                .life-slider__about
+                  p= slide.about
+                .life-slider__benefits
+                  each benefit in slide.benefits
+                    .life-slider__benefit
+                      .life-slider__benefit-icon
+                        img(src=benefit.src alt="")
+                      .life-slider__benefit-title= benefit.title
+              else
+                .life-slider__benefit.life-slider__benefit--big
+                  .life-slider__benefit-icon
+                    img(src=slide.src alt="")
+                  .life-slider__benefit-title= slide.title
+                .life-slider__benefit-descr
+                  p= slide.desc
+        .life-slider__nav
+          button.swiper-button-prev
+            +svg("arrow-right")
+          button.swiper-button-next
+            +svg("arrow-right")

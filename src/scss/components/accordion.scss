@@ -1,0 +1,132 @@
+.accordion-list {
+  list-style-type: none;
+  margin: 0 -12px;
+
+  @include laptop {
+    width: 50%;
+    margin: 0;
+  }
+
+  @include desktop {
+    width: 100%;
+  }
+}
+
+.accordion {
+  @include tablet {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+
+.accordion__content {
+  display: none;
+  color: $color-white;
+  font-family: $font-secondary;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 0 5% 0 1%;
+  margin-bottom: 16px;
+  animation: fadeInDown;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+
+  @include laptop {
+    padding: 0 6% 0 0;
+    line-height: 24px;
+  }
+
+  @include desktop {
+    font-size: 22px;
+    margin-bottom: 55px;
+    line-height: 28px;
+    padding: 0 24px 0 0;
+  }
+
+  &.is-open {
+    display: block;
+    animation: fadeInDown;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+  }
+}
+
+.accordion__header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @include desktop {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.accordion__toggle {
+  display: flex;
+  background: none;
+  border: none;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+
+  &[aria-expanded="false"] {
+    .accordion__toggle-icon {
+      transform: rotate(0);
+      transition-property: transform;
+      transition-duration: $transition-duration * 2;
+    }
+  }
+
+  &[aria-expanded="true"] {
+    .accordion__toggle-icon {
+      transform: rotate(-180deg);
+      transition-property: transform;
+      transition-duration: $transition-duration * 2;
+    }
+  }
+}
+
+.accordion__title {
+  color: $color-white;
+  font-family: $font-secondary;
+  font-size: 20px;
+  letter-spacing: 0;
+  text-align: left;
+  line-height: 26px;
+  padding-right: 16px;
+
+  @include desktop {
+    letter-spacing: -1.5px;
+    font-size: 30px;
+  }
+}
+
+.accordion-list__item:last-child::after {
+  content: " ";
+  border-bottom: 1px solid $color-white;
+  width: 100%;
+  display: block;
+
+  @include desktop {
+    width: 100%;
+  }
+}
+
+.accordion-list__item::before {
+  content: " ";
+  border-bottom: 1px solid $color-white;
+  width: 100%;
+  display: block;
+
+  @include desktop {
+    width: 100%;
+  }
+}
+
+.accordion__toggle-icon svg {
+  fill: $color-white;
+  height: 14px;
+  width: 14px;
+}

@@ -1,0 +1,113 @@
+.main-video {
+  &.section {
+    padding-top: 0;
+  }
+
+  &__wrap {
+    height: calc(100vw * 221 / 393);
+    margin: 0 -($container-padding-x / 2);
+    z-index: 2;
+    position: relative;
+
+    @include tablet {
+      height: calc(100vw * 443 / 1024);
+      margin: 0;
+    }
+
+    @include desktop {
+      height: calc(100vw * 920 / 1920);
+      max-height: 100vh;
+    }
+
+    @media (min-width: 1920px) {
+      height: 920px;
+    }
+
+    & .video {
+      height: 100%;
+
+      &__play {
+        width: 60px;
+        height: 60px;
+
+        @include tablet {
+          width: 72px;
+          height: 72px;
+        }
+
+        @include desktop {
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+  }
+
+  &--small {
+    .main-video__wrap {
+      height: calc(100vw * 181 / 322);
+
+      @include tablet {
+        height: calc(100vw * 443 / 788);
+      }
+
+      @include desktop {
+        height: calc(100vw * 611 / 1088);
+        max-height: 100vh;
+      }
+
+      @media (min-width: 1920px) {
+        height: 611px;
+      }
+
+      & .video {
+        height: 100%;
+
+        &__play {
+          @include desktop {
+            width: 144px;
+            height: 144px;
+          }
+        }
+      }
+    }
+  }
+
+  &--overlap {
+    margin-bottom: -(calc(calc(100vw * 181 / 788) / 2));
+
+    @include tablet {
+      margin-bottom: -(calc(calc(100vw * 443 / 788) / 2));
+    }
+
+    @include desktop {
+      margin-bottom: -(calc(calc(100vw * 611 / 1088) / 2));
+    }
+
+    @media (min-width: 1920px) {
+      margin-bottom: -(calc(611px / 2));
+    }
+
+    + section {
+      padding-top: calc(
+        calc(calc(100vw * 181 / 788) / 2) + $section-padding-vertical * 2
+      );
+
+      @include tablet {
+        padding-top: calc(
+          calc(calc(100vw * 443 / 788) / 2) + $section-padding-vertical
+        );
+      }
+
+      @include desktop {
+        padding-top: calc(
+          calc(calc(100vw * 611 / 1088) / 2) + $section-padding-vertical-desktop
+        );
+      }
+
+      @media (min-width: 1920px) {
+        padding-top: calc(611px / 2) + $section-padding-vertical-desktop;
+      }
+    }
+  }
+}

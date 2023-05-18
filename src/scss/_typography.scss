@@ -1,0 +1,177 @@
+$h1-font-size: 33px;
+$h2-font-size: 20px;
+$h3-font-size: 16px;
+$h4-font-size: 20px;
+$h5-font-size: 10px;
+$h6-font-size: 8px;
+$h1-font-size-desktop: 80px;
+$h2-font-size-desktop: 26px;
+$h3-font-size-desktop: 40px;
+$h4-font-size-desktop: 26px;
+$h5-font-size-desktop: 12px;
+$h6-font-size-desktop: 10px;
+$h1-font-size-desktop--small: 60px;
+
+h1,
+.h1 {
+  font-family: $font-secondary;
+  font-size: 26px;
+  line-height: 40px;
+  margin-bottom: 40px;
+  font-weight: 900;
+
+  @media (min-width: 385px) {
+    font-size: $h1-font-size;
+  }
+
+  @include laptop {
+    margin-bottom: 60px;
+
+    &--small {
+      font-size: $h1-font-size-desktop--small;
+      line-height: 73px;
+    }
+  }
+
+  @include desktop {
+    font-size: $h1-font-size-desktop;
+    line-height: 97px;
+
+    &--small {
+      font-size: $h2-font-size-desktop;
+      line-height: 73px;
+    }
+  }
+}
+
+h2,
+.h2 {
+  font-family: $font-secondary;
+  font-size: $h2-font-size;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: $color-white;
+  margin-bottom: 40px;
+
+  @include desktop {
+    font-size: $h2-font-size-desktop;
+    line-height: 32px;
+    letter-spacing: 2.6px;
+    font-weight: 400;
+    margin-bottom: 74px;
+  }
+}
+
+h3,
+.h3 {
+  font-family: $font-secondary;
+  font-size: $h3-font-size;
+  line-height: 20px;
+  font-weight: 500;
+
+  @include desktop {
+    font-size: $h3-font-size-desktop;
+    line-height: 49px;
+    font-weight: 900;
+  }
+}
+
+h4,
+.h4 {
+  font-family: $font-secondary;
+  font-size: $h4-font-size;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+
+  @include desktop {
+    font-size: $h4-font-size-desktop;
+    line-height: 32px;
+    letter-spacing: 2.6px;
+  }
+}
+
+h5,
+.h5 {
+  font-family: $font-secondary;
+  font-size: $h5-font-size;
+
+  @include desktop {
+    font-size: $h5-font-size-desktop;
+  }
+}
+
+h6,
+.h6 {
+  font-family: $font-secondary;
+  font-size: $h6-font-size;
+
+  @include desktop {
+    font-size: $h6-font-size-desktop;
+  }
+}
+
+.h1,
+h1,
+.h2,
+h2,
+.h3,
+h3,
+.h4,
+h4,
+.h5,
+h5,
+.h6 h6 {
+  text-transform: uppercase;
+}
+
+ul.bullet-list,
+article ul {
+  li {
+    position: relative;
+    list-style-position: outside;
+    list-style-type: none;
+    padding: 0 0 0 15px;
+
+    @include laptop {
+      padding: 0 0 0 30px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background-color: $color-primary-light;
+
+      @include laptop {
+        top: 12px;
+      }
+    }
+  }
+}
+
+p {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 20px;
+
+  @include desktop {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+.colored {
+  color: $color-primary-light;
+}

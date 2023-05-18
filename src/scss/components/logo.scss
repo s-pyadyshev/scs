@@ -1,0 +1,14 @@
+.logo {
+    width: 214px;
+    height: 25px;
+    margin-right: 32px;
+
+    & img {
+        width: 100%;
+    }
+
+    @include laptop {
+        width: 450px;
+        height: 52px;
+    }
+}

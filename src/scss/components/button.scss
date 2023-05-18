@@ -1,0 +1,157 @@
+$button-background-color: $color-white;
+$button-background-color-hover: transparent;
+$button-border-color: $color-white;
+$button-color: $color-primary;
+$button-color-hover: $color-white;
+$button-color-active: $color-white;
+
+.button {
+  position: relative;
+  display: inline-block;
+  min-width: 250px;
+  min-height: 50px;
+  font-family: $font-secondary;
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 500;
+  padding: 17px 40px 17px 20px;
+  outline: none;
+  appearance: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+  border: 1px solid $button-border-color;
+  background-color: $button-background-color;
+  color: $button-color;
+
+  @media (min-width: 355px) {
+    min-width: 200px;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
+
+  @include tablet {
+    min-width: 212px;
+    max-width: 322px;
+  }
+
+  @include laptop {
+    max-width: 421px;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 20px 22px 20px 22px;
+    letter-spacing: 1.3px;
+  }
+
+  @include desktop {
+    min-width: 290px;
+    font-size: 16px;
+    letter-spacing: 1.3px;
+    padding: 20px 22px 20px 22px;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+    color: $color-white;
+
+    svg {
+      fill: $color-white;
+    }
+  }
+
+  &[disabled] {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    width: 15px;
+    height: 15px;
+    transform: translateY(-50%);
+    fill: $color-primary;
+    transition: fill $transition-duration;
+  }
+
+  &.icon-left {
+    svg {
+      left: 18px;
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  &--inverse {
+    background-color: transparent;
+    border-color: $color-white;
+    color: $color-white;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $color-white;
+      border-color: $color-white;
+      color: $color-secondary;
+
+      svg {
+        fill: $color-secondary;
+      }
+    }
+
+    svg {
+      fill: $color-white;
+    }
+  }
+
+  &--inverse-secondary {
+    border-color: $color-primary;
+    color: $color-primary;
+
+    svg {
+      fill: $color-primary;
+    }
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: $color-white;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $color-secondary;
+      border-color: $color-secondary;
+
+      .background-secondary & {
+        border-color: $color-white;
+      }
+    }
+
+    svg {
+      fill: $color-white;
+    }
+  }
+
+  &--secondary {
+    border-color: $color-secondary;
+    background-color: $color-secondary;
+    color: $color-white;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $color-primary;
+      border-color: $color-primary;
+    }
+
+    svg {
+      fill: $color-white;
+    }
+  }
+}

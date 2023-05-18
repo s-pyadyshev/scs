@@ -1,0 +1,25 @@
+extends pug/base
+
+prepend vars
+  - title = 'The Joint Venture'
+
+append vars
+  //-
+
+block content
+  +search()
+  .main-video.main-video--small.main-video--overlap
+    .container
+      .row
+        .col-xxl-8.offset-xxl-2
+          .main-video__wrap
+            +videoVimeo
+  section.section.section-joint-venture.background-primary 
+    .container
+      .row 
+        .col-md-8.offset-md-2
+          p
+            b SCS JV combines three of the largest construction companies in Europe: Skanska, Costain and STRABAG. The individual companies have all delivered high-speed rail and major infrastructure internationally and have a proven record of working together. For HS2, this is an industry-changing partnership.
+          p Together, SCS JV is delivering the London tunnels section of HS2, a high-speed rail network that will connect 30 million people. It’s a project of incredible scale and currently the largest construction project in Europe. The complexity of the task means that we are pioneering new methods and technologies, transforming the construction industry for future generations.
+  include pug/components/company.pug
+  include pug/components/facts.pug
