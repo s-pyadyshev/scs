@@ -1,0 +1,66 @@
+.card-role {
+  list-style-type: none;
+  display: grid;
+  grid-template-areas: "title" "list" "text" "button";
+
+  @include desktop {
+    grid-template-areas: "title button" "list empty" "text text";
+    grid-template-columns: 1.1fr 1fr;
+  }
+}
+
+.card-role .button {
+  grid-area: button;
+
+  @include desktop {
+    margin-left: auto;
+    margin-bottom: auto;
+  }
+}
+
+.card-role ul {
+  grid-area: list;
+
+  @include desktop {
+    margin-bottom: 38px;
+  }
+}
+
+.card-role > p {
+  grid-area: text;
+  margin-bottom: 0;
+  text-align: left;
+  margin-bottom: 40px;
+
+  @include tablet {
+    margin-bottom: 16px;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.card-role li p {
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  font-family: $font-secondary;
+  font-size: 12px;
+  letter-spacing: 1px;
+  @include desktop {
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+}
+
+.card-role li {
+  margin-bottom: 16px;
+  letter-spacing: 1.7px;
+
+  @include desktop {
+    margin-bottom: 6px;
+  }
+}

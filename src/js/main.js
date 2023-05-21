@@ -3,6 +3,7 @@ import "./vendor";
 import { accordion } from "./components/accordion";
 import { mobileMenu } from "./components/mobile-menu";
 import { lifeSlider } from "./components/life-slider";
+import { teamSlider } from "./components/team-slider";
 import { slider } from "./components/slider";
 import { sliderPagination } from "./components/sliderPagination";
 import { carsdSlider } from "./components/cards-slider";
@@ -18,6 +19,7 @@ window.addEventListener(
     accordion.init();
     mobileMenu.init();
     lifeSlider.init();
+    teamSlider.init();
     slider.init();
     sliderPagination.init();
     carsdSlider.init();

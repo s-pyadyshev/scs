@@ -9,6 +9,53 @@
 }
 
 .section-sm {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @include desktop {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.section--overlap-bottom {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 25% 75%;
+
+  > .section {
+    &:first-child {
+      position: relative;
+    }
+
+    + .section {
+      display: flex;
+      flex-direction: column;
+      padding-top: 0;
+
+      > * {
+        margin-top: auto;
+      }
+    }
+  }
+}
+
+.section-overlap {
+  display: grid;
+  grid-template: repeat(3, [row] 1fr) / repeat(1, [col] 1fr);
+
+  > *:first-child {
+    grid-column: col 1 / span 2;
+    grid-row: row 1 / 3;
+  }
+
+  > *:nth-child(2) {
+    grid-column: col 1 / span 2;
+    grid-row: row 2 / 4;
+  }
+
+  > *:nth-child(3) {
+    grid-column: col 1 / span 2;
+    grid-row: row 4;
+  }
 }

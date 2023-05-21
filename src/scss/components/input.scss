@@ -1,4 +1,5 @@
 .input {
+  width: inherit;
   font-size: $input-font-size;
   line-height: 20px;
   padding: $input-padding;
@@ -8,6 +9,7 @@
   border-radius: $input-border-radius;
   background-color: $color-white;
   color: $input-color;
+  width: inherit;
 
   @include laptop {
     font-size: $input-font-size-desktop;
@@ -31,7 +33,7 @@
     outline: none;
   }
 
-  &::placeholder {
+  @include placeholder {
     font-weight: 300;
     font-size: 16px;
     color: $color-dark-gray;

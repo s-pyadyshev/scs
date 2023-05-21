@@ -1,4 +1,5 @@
 @import "components/accordion";
+@import "components/article";
 @import "components/button";
 @import "components/checkbox";
 @import "components/container";
@@ -24,6 +25,7 @@
 @import "components/textarea";
 @import "components/toggle";
 @import "components/video";
+@import "components/job-advert";
 @import "components/welcome";
 @import "components/card-company";
 @import "components/card-job";
@@ -31,12 +33,23 @@
 @import "components/cards-slider";
 @import "components/about-job";
 @import "components/partnership";
+@import "components/jobs";
 @import "components/innovation";
 @import "components/scrollspy";
 @import "components/project";
 @import "components/main-life";
 @import "components/life-slider";
+@import "components/inclusion";
+@import "components/insights";
 @import "components/section-joint-venture";
+@import "components/team.scss";
+@import "components/podcast";
+@import "components/bar";
+@import "components/bullet-list";
+@import "components/section-apply";
+@import "components/map";
+@import "components/card-address";
+@import "components/card-role";
 // @import "components/badge";
 // @import "components/breadcrumb";
 // @import "components/chart";

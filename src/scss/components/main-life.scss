@@ -6,7 +6,11 @@
 
     @include desktop {
       padding-top: 136px;
-      padding-bottom: 0;
+      padding-bottom: 126px;
+    }
+
+    @media (min-width: 1440px) {
+      padding-bottom: 248px;
     }
   }
 

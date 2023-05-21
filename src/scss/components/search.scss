@@ -1,7 +1,5 @@
 .search {
   position: relative;
-  padding-top: 10px;
-  padding-bottom: 10px;
   z-index: 4;
 
   @include desktop {
@@ -11,7 +9,6 @@
 
   &__job-title {
     .input {
-
       @include tablet {
         padding: 9px 20px;
       }

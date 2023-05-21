@@ -1,5 +1,5 @@
-$pagination-color-current: $color-secondary;
-$pagination-color-hover: $color-secondary;
+$pagination-color-current: $color-primary;
+$pagination-color-hover: $color-primary;
 $pagination-gap: 10px;
 
 .pagination {
@@ -14,7 +14,7 @@ $pagination-gap: 10px;
   &__item {
     &.is-active {
       .pagination__link {
-        border-color: $color-secondary;
+        border-color: $pagination-color-current;
 
         .pagination--inverse & {
           border-color: $color-white;
@@ -34,18 +34,25 @@ $pagination-gap: 10px;
     font-weight: 500;
     font-size: 12px;
     line-height: 40px;
-    color: $color-secondary;
+    color: $pagination-color-current;
     background-color: transparent;
     border: 1px solid transparent;
     border-radius: 0;
     text-align: center;
 
+    @include desktop {
+      font-size: 18px;
+      line-height: 60px;
+      width: 60px;
+      height: 60px;
+    }
+
     .pagination--inverse & {
       color: $color-white;
+    }
 
-      &.swiper-pagination-bullet {
-        border: 1px solid transparent;
-      }
+    &.swiper-pagination-bullet {
+      border: 1px solid transparent;
     }
 
     &:focus,
@@ -67,7 +74,6 @@ $pagination-gap: 10px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: $pagination-gap;
     list-style-type: none;
 
     a {

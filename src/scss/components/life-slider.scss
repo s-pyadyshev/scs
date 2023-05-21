@@ -72,9 +72,7 @@
   }
 
   &__about {
-
     p {
-
       @include desktop {
         margin-bottom: 30px;
       }
@@ -93,7 +91,6 @@
   }
 
   .swiper-slide {
-
     &:first-child {
       .life-slider__benefit {
         @include desktop {
@@ -117,7 +114,6 @@
   }
 
   &__title {
-
     @include desktop {
       font-size: 18px;
       line-height: 22px;
@@ -197,6 +193,10 @@
 
     @include desktop {
       gap: 40px;
+    }
+
+    button {
+      border: 1px solid $color-white;
     }
   }
 }

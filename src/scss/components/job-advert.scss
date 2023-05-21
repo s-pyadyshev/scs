@@ -1,0 +1,116 @@
+.page-header__button {
+  color: $color-primary;
+  background-color: $color-sky-blue;
+  text-align: center;
+  border: 1px solid $color-primary-dark;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $color-white;
+    border-color: $color-primary;
+    color: $color-primary;
+
+    svg {
+      fill: $color-primary-dark;
+    }
+  }
+}
+
+.section-job-advert__anchors {
+  display: none;
+
+  @include tablet {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  }
+
+  button {
+    min-width: auto;
+  }
+}
+
+.section-job-advert .button {
+  text-align: center;
+}
+
+.section-job-advert .button--default {
+  text-align: left;
+}
+
+.section-job-overview {
+  background-color: $color-primary;
+}
+
+.overview-list {
+  list-style-type: none;
+}
+
+.section-job-overview__intro p {
+  text-align: left;
+}
+
+.section-job-overview__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include tablet {
+    flex-direction: row;
+    padding: 40px 0;
+    gap: 40px;
+  }
+
+  @include desktop {
+    gap: 58px;
+    padding: 80px 0;
+  }
+}
+
+.overview-list {
+  background-color: $color-primary-dark;
+  padding: 22px 20px;
+  font-family: $font-secondary;
+
+  @include desktop {
+    min-width: 22%;
+  }
+}
+
+.overview-list p {
+  font-size: 16px;
+  letter-spacing: 2px;
+  line-height: 31px;
+  margin-bottom: 0;
+}
+
+.overview-list li:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.overview-list h4 {
+  color: $color-white;
+  font-size: 26px;
+  line-height: 32px;
+  letter-spacing: 2.6px;
+
+  @include desktop {
+    margin-bottom: 38px;
+  }
+}
+
+.text-primary-light {
+  color: $color-primary-light;
+}
+
+.overview-text h4 {
+  font-weight: 700;
+
+  @include desktop {
+    font-size: 20px;
+    margin-bottom: 22px;
+    letter-spacing: 2px;
+  }
+}

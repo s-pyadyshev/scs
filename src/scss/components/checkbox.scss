@@ -1,7 +1,7 @@
 $checkbox-border-width: 1px;
 $checkbox-border-radius: 50%;
 $checkbox-size: 15px;
-$checkbox-color: $color-black;
+$checkbox-color: $color-white;
 $checkbox-color-focus: $color-black;
 
 .checkbox {
@@ -31,7 +31,7 @@ $checkbox-color-focus: $color-black;
     height: $checkbox-size;
     margin-right: 18px;
     overflow: hidden;
-    background-color: $color-white;
+    background-color: transparent;
     border: $checkbox-border-width solid $checkbox-color;
     border-radius: $checkbox-border-radius;
 
@@ -44,8 +44,10 @@ $checkbox-color-focus: $color-black;
   .checkbox-box__label {
     font-size: 12px;
     line-height: 17px;
+    padding-top: 2px;
 
     @include laptop {
+      padding-top: 0;
       font-size: 16px;
       line-height: 22px;
     }

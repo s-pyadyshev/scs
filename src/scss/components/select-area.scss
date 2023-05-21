@@ -113,7 +113,7 @@
         margin: auto 0;
 
         @include tablet {
-          right: 10px;
+          right: 22px;
         }
       }
     }
@@ -134,6 +134,8 @@
     input,
     .select ~ .fsb-select {
       border-color: $color-primary;
+      border-right: 1px solid $color-primary;
+      border-left: 1px solid $color-primary;
     }
   }
 }

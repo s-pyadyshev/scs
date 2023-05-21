@@ -1,0 +1,42 @@
+.article {
+  padding: 20px 16px;
+
+  @include laptop {
+    padding: 40px;
+  }
+
+  &__col-2 {
+    @include laptop {
+      column-count: 2;
+      column-gap: 120px;
+    }
+  }
+
+  &__header {
+    position: relative;
+
+    img {
+      display: none;
+
+      @include laptop {
+        display: block;
+        position: absolute;
+        top: 2px;
+        right: -11%;
+        width: 44%;
+      }
+    }
+  }
+
+  h2 {
+    @include laptop {
+      width: 64%;
+    }
+  }
+
+  p {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

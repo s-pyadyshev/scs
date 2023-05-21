@@ -1,0 +1,30 @@
+section.podcast-bar#podcast.background-light
+  .container
+    .row
+      .col-lg-9
+        .podcast#podcast-popup
+          .podcast__bar
+            .podcast__controls
+              div
+              .podcast__controls-play
+                button.podcast__forward
+                  +svg('audio-forward')
+                button.podcast__play
+                  +svg('play')
+                button.podcast__backward
+                  +svg('audio-backward')
+              button.podcast__volume
+                +svg('volume')
+            .podcast__progress
+              input.podcast__progress-slider(type="range" min="0" max="100" step=".1" value="0")
+              progress(value="30" max="100")
+              audio
+                source(src="")
+          .podcast__info 
+            div SCS JV CAREERS PODCAST
+            b INTRODUCTION FROM OUR SENIOR PROJECT MANAGER
+      .col-lg-3
+        .podcast-bar__apply
+          button.button.button--secondary.text-left(type="button" data-scrollto="#apply-now")
+            span Apply Now
+            +svg('arrow-down')

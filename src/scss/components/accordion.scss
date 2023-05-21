@@ -14,15 +14,14 @@
 
 .accordion {
   @include tablet {
-    padding-right: 24px;
-    padding-left: 24px;
+    padding-right: 27px;
+    padding-left: 27px;
   }
 }
 
 .accordion__content {
   display: none;
   color: $color-white;
-  font-family: $font-secondary;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
@@ -39,9 +38,9 @@
   }
 
   @include desktop {
-    font-size: 22px;
-    margin-bottom: 55px;
-    line-height: 28px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 27px;
     padding: 0 24px 0 0;
   }
 
@@ -58,8 +57,8 @@
   padding-bottom: 16px;
 
   @include desktop {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 }
 
@@ -91,42 +90,39 @@
 .accordion__title {
   color: $color-white;
   font-family: $font-secondary;
+  font-weight: 400;
   font-size: 20px;
   letter-spacing: 0;
   text-align: left;
   line-height: 26px;
   padding-right: 16px;
+  margin-bottom: 0;
 
   @include desktop {
-    letter-spacing: -1.5px;
-    font-size: 30px;
+    font-size: 26px;
+    letter-spacing: 2.7px;
+    line-height: 32px;
   }
 }
 
-.accordion-list__item:last-child::after {
-  content: " ";
-  border-bottom: 1px solid $color-white;
-  width: 100%;
-  display: block;
-
-  @include desktop {
-    width: 100%;
-  }
-}
-
-.accordion-list__item::before {
-  content: " ";
-  border-bottom: 1px solid $color-white;
-  width: 100%;
-  display: block;
+.accordion-list__item {
+  border-top: 1px solid $color-white;
 
   @include desktop {
     width: 100%;
   }
+
+  &:last-child {
+    border-bottom: 1px solid $color-white;
+  }
 }
 
-.accordion__toggle-icon svg {
-  fill: $color-white;
-  height: 14px;
-  width: 14px;
+.accordion__toggle-icon {
+  flex-shrink: 0;
+
+  svg {
+    fill: $color-white;
+    height: 14px;
+    width: 14px;
+  }
 }

@@ -52,7 +52,7 @@ block content
             .row
               .col-12
                 div(id="typo")
-                  h2.h2 Typography
+                  h3.h3 Typography
 
                   h3.h3 Text
 
@@ -68,21 +68,7 @@ block content
                   h5.h5 Heading5
                   h6.h6 Heading6
                   br
-                  h3.h3 Bullet Lists
-
-                  ul.bullet-list
-                    li
-                      p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.
-                    li
-                      p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.
-                    li
-                      p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.
-                    li
-                      p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.
-                    li
-                      p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.
-                  br
-                  h3.h3 Article Bullet Lists
+                  h3.h3 Bullet List default
                   article
                     ul
                       li
@@ -95,7 +81,33 @@ block content
                         p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.
                       li
                         p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.
-
+                  br
+                  h3.h3 Bullet List custom
+                  ul.bullet-list
+                    li
+                      .bullet-list__number 1
+                      .bullet-list__text
+                        p Your application is received and shortlisting takes place
+                    li
+                      .bullet-list__number 2
+                      .bullet-list__text
+                        p If you’re shortlisted, your CV is anonymised and sent to our hiring managers for review
+                    li
+                      .bullet-list__number 3
+                      .bullet-list__text
+                        p We’ll invite you for interview at one of our sites where you’ll discover more about the role and meet some of our team
+                    li
+                      .bullet-list__number 4
+                      .bullet-list__text
+                        p If you’re successful, you’ll receive a job offer and contract from the relevant parent company
+                    li
+                      .bullet-list__number 5
+                      .bullet-list__text
+                        p Subject to vetting and references, your onboarding process begins
+                    li
+                      .bullet-list__number 6
+                      .bullet-list__text
+                        p Onboarding is complete! Welcome to SCS JV
                   //- ol.ol
                   //-   li
                   //-     p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.
@@ -107,15 +119,16 @@ block content
                   //-     p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.
                   //-   li
                   //-     p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.
+                br
                 div(id="container")
-                  h2.h2 Container
+                  h3.h3 Container
 
                   .container.background-primary .container
                   br
                   .container-md.background-primary .container-md
                 br
                 div(id="grid")
-                  h2.h2 Grid
+                  h3.h3 Grid
                   .row
                     .col-2
                       .background-primary .col-2
@@ -160,14 +173,14 @@ block content
 
                 br
                 div(id="section")
-                  h2.h2 Section
+                  h3.h3 Section
 
                   .section.background-primary .section
                   br
                   .section-sm.background-primary .section-sm
                 br
                 div(id="accordion")
-                  h2.h2 Accordion
+                  h3.h3 Accordion
                   .section.background-primary
                     ul.accordion-list
                       +accordion("Q: What made you choose a career in care?", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur fugiat repellendus suscipit saepe maiores, eligendi ipsum, quisquam asperiores, facilis facere vitae tempore. Sint, temporibus iure minima voluptatibus explicabo harum dignissimos illum corporis cupiditate eveniet sequi excepturi maiores quam maxime culpa quis illo ipsam ab! Sapiente sed fugiat veritatis suscipit!")
@@ -176,14 +189,14 @@ block content
                     //- +accordion-native("Accordion title", "Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content ", true)
                 br
                 div(id="background")
-                  h2.h2 Background
+                  h3.h3 Background
                   .background-default.text-primary .background-default
                   .background-primary .background-primary
                   .background-secondary .background-secondary
                   .background-muted.text-primary .background-muted
                 br
                 div(id="navbar")
-                  h2.h2 Navbar
+                  h3.h3 Navbar
                   +navbar(
                     [
                       {
@@ -200,13 +213,13 @@ block content
                   )
                 br
                 div(id="pagination")
-                  h2.h2 Pagination
-                  +pagination(4)
+                  h3.h3 Pagination
+                  +pagination(4, 1)
                   .background-primary
-                    +pagination(4, 0, 0, 0, false, true)
+                    +pagination(4, 1, 0, 0, false, true)
                 br
                 div(id="tabs")
-                  h2.h2 Tabs
+                  h3.h3 Tabs
                   .background-primary
                     +tabs-custom(
                       [
@@ -228,7 +241,7 @@ block content
 
                 div(id="sliders")
                   .container
-                    h2.h2 Slider
+                    h3.h3 Slider
                     //- +slider
 
                     //- h2.h2 Slider with pagination
@@ -239,7 +252,7 @@ block content
                     //- +slider-thumbs
 
                 .background-primary(id="forms")
-                  h2.h2 Forms
+                  h3.h3 Forms
 
                   h3 Input
                   .form-group
@@ -401,19 +414,19 @@ block content
                      span Disabled
                       +svg('chevron-right')
                 div(id="toggle")
-                  h2.h2 Toggle
+                  h3.h3 Toggle
                   button.button.button--primary(data-collapse-target="content1")
                     span Toggle
                     +svg('chevron-down')
 
                   div(data-collapse-content="content1") Toggle
                 div(id="video")
-                  h2.h2 Video
-                  +videoVimeo
-                  +videoVimeo
+                  h3.h3 Video
+                  +videoVimeo("./images/poster.jpg")
+                  +videoVimeo("./images/poster.jpg")
 
                 div(id="icons")
-                  h2.h2 Icons
+                  h3.h3 Icons
                   <style>.svg-icons{display: flex; flex-wrap: wrap;}.svg-icons svg{ width: 50px; height: 50px;}</style>
                   div(class="svg-icons")
                     +svg('chevron-down')
@@ -422,7 +435,7 @@ block content
                     +svg('mouse')
                     +svg('play')
                 div(id="scrollto")
-                  h2.h2 Scroll To anchors
+                  h3.h3 Scroll To anchors
 
                   button.button.button--primary(data-scrollto="#section1") Anchor to section1
                   div(style="height:100vh")
@@ -508,7 +521,7 @@ block content
                           )
                       .col-md-6.background-secondary
 
-                div(id="scrollspy")
+                .overflow-hidden(id="scrollspy")
                   h3.h3 ScrollSpy
                   section.section
                      .text-secondary(data-scrollspy="animate__fadeInRight") animate__fadeInRight

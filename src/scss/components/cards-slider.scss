@@ -1,13 +1,4 @@
 .cards-slider {
-  &--primary-light {
-    background-color: $color-sky-blue;
-    .cards-slider {
-      &__inner {
-        background-color: $color-black;
-      }
-    }
-  }
-
   &__inner {
     height: auto;
   }
@@ -33,7 +24,7 @@
 
   &__pagination {
     position: static;
-    padding: 10px 30px 30px;
+    padding: 40px 15px 0;
 
     @include laptop {
       display: none;

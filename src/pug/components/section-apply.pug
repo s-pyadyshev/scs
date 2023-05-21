@@ -1,0 +1,71 @@
+section.section-apply.section-sm.background-primary#apply-now
+  .container
+    .row
+      .col-md-6
+        article.section-sm.section-apply__job-info
+          h3 ASSISTANT PROJECT MANAGER (NOISE INSULATION)
+
+          ul
+            li
+              b PARTNER:
+              span SKANSKA
+            li
+              b LOCATION:
+              span NORTH ACTON, LONDON
+            li
+              b CONTRACT TYPE:
+              span PERMANENT
+            li
+              b JOB CATEGORY:
+              span OPERATIONS
+            li
+              b SALARY:
+              span COMPETITIVE WITH EXCELLENT BENEFITS PACKAGE
+            li
+              b CLOSING DATE:
+              span 01 MARCH, 2023
+            li
+              b JOB REFERENCE:
+              span SCSRAIL/TP/7304/2085
+      .col-md-6
+        section.section-apply__form.article.section-sm.background-primary-dark
+          h3 APPLY TODAY
+          form(action="")
+            fieldset
+              legend
+                p Please fill in your details to be redirected to the application portal.
+              .row 
+                .col-md-6
+                  .form-group
+                    .form-control.full-width
+                      input.input(type="text" name="first-name" placeholder="First Name")
+                .col-md-6
+                  .form-group
+                    .form-control.full-width
+                      input.input(type="text" name="last-name" placeholder="Last Name")
+                .form-group
+                  .form-control.full-width
+                    input.input(type="email" name="email" placeholder="Email Address")
+                .form-group
+                  .form-control.full-width
+                    input.input(type="text" name="contact" placeholder="Contact Number")
+                .section-apply__form-checkboxes
+                  .form-group
+                    +checkbox('I acknowledge and give permission for my data to be held by SCS JV and WeLove9am in accordance with the General Data Protection Regulation')
+                  .form-group
+                    +checkbox('I have read and agree to the privacy policy')
+                .form-group.mb-0
+                  button.button.button--inverse.text-left(type="submit" name="submit")
+                    span Submit
+                    +svg('arrow-right')
+      .col-md-6.offset-md-6
+        section.article.section-sm.background-primary-dark
+          h3 ALREADY REGISTERED WITH SCS JV?
+          form(action="")
+            fieldset
+              legend
+                p Login and continue with application.
+              .form-group.mb-0
+                a.button.button--inverse.text-left(href="#")
+                  span Log In
+                  +svg('arrow-right')

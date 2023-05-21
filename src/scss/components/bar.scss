@@ -1,0 +1,9 @@
+.bar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @include desktop {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}

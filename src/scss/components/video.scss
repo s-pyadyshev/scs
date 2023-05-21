@@ -16,6 +16,12 @@
     height: 100%;
     background-position: 50%;
     background-repeat: no-repeat;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__play {
@@ -41,6 +47,39 @@
       width: calc(100% - 2px);
       height: inherit;
       pointer-events: none;
+    }
+  }
+
+  &--slider {
+    height: 393px;
+
+    @include tablet {
+      height: calc(100vw * 443 / 1024);
+    }
+
+    @include desktop {
+      height: calc(100vw * 534 / 1920);
+      max-height: 534px;
+      width: calc(675px + (950 - 650) * ((100vw - 1366px) / (1920 - 1366)));
+      max-width: 950px;
+      flex-shrink: 0;
+    }
+
+    .video {
+      &__play {
+        width: 60px;
+        height: 60px;
+
+        @include tablet {
+          width: 100px;
+          height: 100px;
+        }
+
+        @include desktop {
+          width: 141px;
+          height: 141px;
+        }
+      }
     }
   }
 }

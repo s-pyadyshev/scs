@@ -1,0 +1,48 @@
+.section-apply {
+  &__job-info {
+    word-break: break-word;
+
+    h3 {
+      @include desktop {
+        margin-bottom: 66px;
+      }
+    }
+
+    ul {
+      font-family: $font-secondary;
+      letter-spacing: 2px;
+
+      b {
+        flex-shrink: 0;
+        margin-right: 10px;
+      }
+
+      li {
+        display: flex;
+        margin-bottom: 17px;
+        padding-left: 0;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__form {
+    margin-bottom: 40px;
+  }
+
+  &__form-checkboxes {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .button {
+    width: 100%;
+
+    @include laptop {
+      width: auto;
+    }
+  }
+}

@@ -6,14 +6,14 @@
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 40px;
+  padding-bottom: 130px;
   min-height: 240px;
   background-color: $color-primary;
 
   @include laptop {
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 130px;
+    padding-bottom: 260px;
   }
 
   h1 {
@@ -21,11 +21,13 @@
     font-weight: 800;
     line-height: 36px;
     letter-spacing: -1.5px;
+    margin-bottom: 40px;
 
     @include laptop {
-      font-size: 70px;
-      line-height: 55px;
-      letter-spacing: -3.5px;
+      font-size: 60px;
+      line-height: 73px;
+      letter-spacing: 0.5px;
+      margin-bottom: 80px;
     }
   }
 
@@ -47,5 +49,79 @@
     @include laptop {
       height: 84px;
     }
+  }
+}
+
+.page-header-secondary-mobile {
+  min-height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.page-header-secondary {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-image: none;
+  background: $color-primary;
+
+  @include tablet {
+    padding-bottom: 0;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 286px;
+  }
+
+  @include desktop {
+    padding: 232px 0 0 0;
+  }
+
+  > * {
+    @include tablet {
+      display: grid;
+      align-items: end;
+    }
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-primary;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.page-header-secondary h2 {
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0;
+  font-weight: 900;
+  text-align: left;
+  color: $color-white;
+  z-index: 10;
+  position: relative;
+  margin-bottom: 0;
+
+  @include desktop {
+    font-size: 60px;
+    max-width: 70%;
+    line-height: 70px;
+    margin-bottom: 68px;
   }
 }

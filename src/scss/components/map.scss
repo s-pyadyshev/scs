@@ -1,0 +1,13 @@
+.map {
+  height: 900px;
+  background-position: 50%;
+  background-size: cover;
+
+  @include tablet {
+    height: 690px;
+  }
+
+  @include laptop {
+    height: 1330px;
+  }
+}

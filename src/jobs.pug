@@ -8,3 +8,117 @@ append vars
 
 block content
   +search()
+  section.section-job
+    .page-header-primary
+      h2 Job opportunities
+      .container 
+        .row 
+          .col-md-8.offset-md-2
+            p Whatever your skills and experience, if you thrive in an environment where you’re given the freedom to solve big problems, we’ve got a role for you. To find out more about working at SCS JV, watch our ‘Meet the Team’ videos or hear from our senior leaders in our latest podcast.
+    .container 
+      .section-job__intro
+        .row
+          .col-md-6.col-xl-7
+            .section-job__list
+              h3 104 jobs found
+              ul.section-job__vacation
+                li
+                  .card-role
+                    h4 Senior general foreman 
+                    ul
+                      li
+                        p <strong>Partner:</strong> Skanska
+                      li
+                        p <strong>Location:</strong> North Acton, London
+                      li
+                        p <strong>Contact type:</strong> Permanent
+                      li
+                        p <strong>Salary:</strong> Competitive
+                    button.button
+                      span View role
+                      +svg('arrow-right')
+                    p To assist the asset Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi molestias beatae necessitatibus aliquam voluptas, perspiciatis tenetur repellendus consequuntur? Qui rerum maiores eius perspiciatis reiciendis natus molestias consequatur similique ducimus magni.
+                li
+                  .card-role
+                    h4 Senior general foreman 
+                    ul
+                      li
+                        p <strong>Partner:</strong> Skanska
+                      li
+                        p <strong>Location</strong> North Acton, London
+                      li
+                        p <strong>Contact type</strong> Permanent
+                      li
+                        p <strong>Salary</strong> Competitive
+                    button.button
+                      span View role
+                      +svg('arrow-right')
+                    p To assist the asset Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi molestias beatae necessitatibus aliquam voluptas, perspiciatis tenetur repellendus consequuntur? Qui rerum maiores eius perspiciatis reiciendis natus molestias consequatur similique ducimus magni.
+                li
+                  .card-role
+                    h4 Senior general foreman 
+                    ul
+                      li
+                        p <strong>Partner:</strong> Skanska
+                      li
+                        p <strong>Location</strong> North Acton, London
+                      li
+                        p <strong>Contact type</strong> Permanent
+                      li
+                        p <strong>Salary</strong> Competitive
+                    button.button
+                      span View role
+                      +svg('arrow-right')
+                    p To assist the asset Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi molestias beatae necessitatibus aliquam voluptas, perspiciatis tenetur repellendus consequuntur? Qui rerum maiores eius perspiciatis reiciendis natus molestias consequatur similique ducimus magni.
+                li
+                  .card-role
+                    h4 Senior general foreman 
+                    ul
+                      li
+                        p <strong>Partner:</strong> Skanska
+                      li
+                        p <strong>Location</strong> North Acton, London
+                      li
+                        p <strong>Contact type</strong> Permanent
+                      li
+                        p <strong>Salary</strong> Competitive
+                    button.button
+                      span View role
+                      +svg('arrow-right')
+                    p To assist the asset Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi molestias beatae necessitatibus aliquam voluptas, perspiciatis tenetur repellendus consequuntur? Qui rerum maiores eius perspiciatis reiciendis natus molestias consequatur similique ducimus magni.    
+              +pagination(3, 1, 0, 0, false, true)
+          .col-md-6.col-xl-4.offset-xl-1.section-job__search
+            .search-filter-forms
+              h4 Search filter
+              form(action="").search-filter-forms__wrap.article
+                .form-group 
+                  label(for="text").label
+                  .form-control.full-width
+                    input(id="text" name="text" type="text" placeholder="Job title/ Keywords").input
+                .form-group
+                  .form-control.full-width
+                    select(name="category")
+                      option Category
+                      option Bbbbb
+                      option CCCCC
+                      option DDDDD
+                      option EEEEE
+                .form-group
+                  .form-control.full-width
+                    select(name="location")
+                      option Location
+                      option Bbbbb
+                      option CCCCC
+                      option DDDDD
+                      option EEEEE
+                .form-group
+                  .form-control.full-width
+                    select(name="contract")
+                      option Contract type
+                      option Bbbbb
+                      option CCCCC
+                      option DDDDD
+                      option EEEEE
+                button.button.button--inverse.text-left.button--inverse-secondary(type="submit")
+                  span Search
+                  +svg('arrow-right')

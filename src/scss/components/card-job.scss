@@ -93,4 +93,12 @@
       line-height: 27px;
     }
   }
+
+  .button {
+    width: 100%;
+
+    @include tablet {
+      width: auto;
+    }
+  }
 }

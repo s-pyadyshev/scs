@@ -1,0 +1,176 @@
+.team {
+  background-color: $color-sky-blue;
+
+  @include tablet {
+    background-color: $color-primary;
+    margin-bottom: calc((calc(calc(100vw * 443 / 1024) / -2)) - 100px);
+  }
+
+  @include desktop {
+    margin: 0;
+    position: relative;
+    padding-bottom: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 35%;
+      background: linear-gradient(
+        to bottom,
+        $color-black 50%,
+        $color-sky-blue 0
+      );
+
+      @media (min-width: 1920px) {
+        width: calc(550px + (100vw - 1920px) / 2);
+      }
+    }
+  }
+
+  + section {
+    padding-top: calc(
+      calc(calc(100vw * 443 / 1024) / 2) + $section-padding-vertical + 20px
+    );
+
+    @include desktop {
+      padding-top: 0;
+    }
+  }
+
+  &.section {
+    padding-top: 0;
+  }
+
+  &__slider {
+    margin: 0 calc(($container-padding-x / -2));
+
+    @include tablet {
+      margin: 0;
+    }
+
+    @include desktop {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    .swiper-slide {
+      @include desktop {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .pagination {
+      position: static;
+      margin-top: 20px;
+
+      @include desktop {
+        z-index: 1;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        top: auto;
+        margin-top: 0;
+        justify-content: flex-end;
+      }
+    }
+
+    .pagination__link {
+      background-color: $color-sky-blue;
+    }
+  }
+
+  &__title,
+  &__author {
+    font-family: $font-secondary;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    @include laptop {
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 1.6px;
+    }
+  }
+
+  &__text-wrap {
+    padding: 40px 35px;
+
+    @include tablet {
+      margin-bottom: -(calc(calc(100vw * 443 / 1024) / 2));
+      padding-bottom: calc(calc(calc(100vw * 443 / 1024) / 2) + 40px);
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include desktop {
+      padding-bottom: 0;
+      padding-top: 0;
+      margin: 0;
+      padding-right: 40px;
+      width: calc(550px + (690 - 550) * ((100vw - 1366px) / (1920 - 1366)));
+      max-width: 690px;
+      flex-shrink: 0;
+      align-self: flex-start;
+    }
+  }
+
+  &__text {
+    blockquote {
+      position: relative;
+      font-family: $font-secondary;
+      font-size: 33px;
+      line-height: 40px;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      padding: 50px 0;
+
+      @include desktop {
+        font-size: 40px;
+        line-height: 49px;
+        margin-bottom: 50px;
+      }
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 40px;
+        height: 30px;
+        background-image: url("../../images/quotes.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      &::after {
+        top: 0;
+      }
+
+      &::before {
+        bottom: 0;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__author {
+    margin: 0;
+
+    @include laptop {
+      font-size: 26px;
+      line-height: 32px;
+      letter-spacing: 2.6px;
+    }
+  }
+}

@@ -1,5 +1,9 @@
 .background-default {
   background-color: $color-black;
+
+  + .background-default {
+    padding-top: 0;
+  }
 }
 
 .background-muted {
@@ -8,6 +12,10 @@
 
 .background-primary {
   background-color: $color-primary;
+}
+
+.background-primary-dark {
+  background-color: $color-primary-dark;
 }
 
 .background-secondary {
@@ -50,6 +58,10 @@
   text-align: left !important;
 }
 
+.text-uppercase {
+  text-transform: uppercase;
+}
+
 .ma {
   width: fit-content;
   margin: 0 auto !important;
@@ -69,6 +81,10 @@
 
 .pb-0 {
   padding-bottom: 0 !important;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .full-width {

@@ -75,3 +75,11 @@ $grid-breakpoints: (
   xl: 1366px,
   xxl: 1920px,
 ) !default;
+
+@each $breakpoint, $value in $grid-breakpoints {
+  .hidden-#{$breakpoint} {
+    @media (min-width: $value) {
+      display: none;
+    }
+  }
+}

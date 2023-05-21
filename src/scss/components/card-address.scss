@@ -1,0 +1,35 @@
+.card-address {
+  background-color: $color-primary;
+  width: 322px;
+  height: 269px;
+  padding: 20px;
+
+  @include desktop {
+    width: 398px;
+    height: 385px;
+    padding: 40px;
+  }
+}
+
+.card-address p {
+  font-style: normal;
+  font-family: $font-secondary;
+  text-align: left;
+  letter-spacing: 0.5px;
+  @include desktop {
+    margin-bottom: 36px;
+  }
+}
+
+.card-address h4 {
+  @include desktop {
+    margin-bottom: 38px;
+  }
+}
+
+.card-address .button {
+  min-width: 282px;
+  @include desktop {
+    min-width: 316px;
+  }
+}

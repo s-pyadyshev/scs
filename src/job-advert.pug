@@ -7,4 +7,73 @@ append vars
   //-
 
 block content
-  +search()
+  .bar.background-secondary.text-center.hidden-lg
+    .container
+      button.button.button--inverse.text-left.full-width(type="button" data-scrollto="#apply-now")
+        span Apply Now
+        +svg('arrow-down')
+  include pug/components/podcast
+  section.section-job-advert
+    .page-header-secondary-mobile(style=`background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(./images/team2.jpg)`)
+    .page-header-secondary(style=`background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, transparent 100%), url(./images/team1.jpg)`)
+      .container
+        h2 ASSISTANT PROJECT MANAGER (NOISE INSULATION)
+        .section-job-advert__anchors.background-light
+          button.button.button--inverse.button--inverse-secondary(data-scrollto="#overview") Overview 
+          button.button.button--inverse.button--inverse-secondary(data-scrollto="#meet-your-team") Meet your team
+          button.button.button--inverse.button--inverse-secondary(data-scrollto="#location") Location
+          button.button.button--inverse.button--inverse-secondary(data-scrollto="#faqs") FAQS
+          button.button.button--inverse.button--inverse-secondary(data-scrollto="#hiring") Hiring process
+          button.button.button--default.button--inverse-secondary(data-scrollto="#apply-now")
+            span Apply now
+            +svg('arrow-down')
+    .section-job-overview#overview
+      .container 
+        .section-job-overview__intro
+          ul.overview-list
+            h4.text-uppercase Overview 
+            li
+              p.text-uppercase <strong class="text-primary-light">Partner:</strong><br>Skanska
+            li
+              p.text-uppercase <strong class="text-primary-light">Location:</strong><br>North Acton, London
+            li
+              p.text-uppercase <strong class="text-primary-light">Contact type:</strong><br>Permanent
+            li 
+              p.text-uppercase <strong class="text-primary-light">Job category:</strong><br>Operations
+            li
+              p.text-uppercase <strong class="text-primary-light">Salary:</strong><br>Competitive with excellent benefits package
+            li
+              p.text-uppercase <strong class="text-primary-light">Closing date:</strong><br>05.04.2023
+            li
+              p.text-uppercase <strong class="text-primary-light">Job reference:</strong><br>SCSRAIL/TP/7304
+          article.overview-text
+            p To assist the asset leads with the planning, sequencing, methodology and design constructability of the Old Oak Common (OOC) Tunnel Boring Machine (TBM) launch site for the S1 Euston Tunnels. This will require engagement with 3rd part principal contractors, sub-contractors, designers, and project support functions throughout the works. 
+            h4.text-primary-light.text-uppercase WORKING HOURS: 
+            p Weekdays core hours (08:00 – 18:00) with flexible working available to suite travel requirements and family commitments. Working from home (WFH) is available, with specifics to be discussed and agreed with line manager(s). 
+            h4.text-primary-light.text-uppercase WORK SCOPE: 
+            p Construction and launch of 2no. Tunnel Boring Machines (TBMs). Works include designing of the launch setup, commissioning of the TBMs and construction of ~15km of bored, segmentally lined tunnels beneath central London. 
+            p Works are scheduled to commence in April 2023 and complete by 2026. 
+            h4.text-primary-light.text-uppercase Role resposibility:
+            ul
+              li 
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ducimus quos explicabo vero quis enim necessitatibus minus, velit, quam dicta deleniti! Quasi cumque vitae deleniti accusantium officiis qui aspernatur consectetur.
+              li 
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt provident sed, voluptatem aut fugit nemo aliquam dolorem in eius illum eligendi unde cupiditate ab perferendis maxime! Distinctio aperiam nulla beatae.
+              li 
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur suscipit atque quo mollitia. Minus reprehenderit quam natus, ad voluptate quo perspiciatis cum rerum vero inventore voluptas nostrum obcaecati consequatur ducimus?
+              li 
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi voluptas magni sunt iusto modi dolorem nemo, nisi eos animi culpa ex doloribus, saepe optio eligendi vero a, rerum placeat quis.
+  section.section#location
+    .container
+      .card-address
+        h4.text-uppercase Location
+        address
+          p.text-uppercase SCS Jv Railways<br>Black Arrow House,<br>2 Chandos Road,<br>London<br>NW10 6NF
+          button.button.button--inverse.text-left(type="button")
+            span Plan commute
+            +svg("arrow-right")
+  section.section.background-default
+    include pug/components/team
+  include pug/components/section-faq
+  include pug/components/section-hiring
+  include pug/components/section-apply
