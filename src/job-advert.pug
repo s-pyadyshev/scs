@@ -63,7 +63,9 @@ block content
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur suscipit atque quo mollitia. Minus reprehenderit quam natus, ad voluptate quo perspiciatis cum rerum vero inventore voluptas nostrum obcaecati consequatur ducimus?
               li 
                 p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi voluptas magni sunt iusto modi dolorem nemo, nisi eos animi culpa ex doloribus, saepe optio eligendi vero a, rerum placeat quis.
-  section.section#location
+  section.section.background-default
+    include pug/components/team
+  section.section#location(style="background-image: url(./images/location.jpg)")
     .container
       .card-address
         h4.text-uppercase Location
@@ -72,8 +74,6 @@ block content
           button.button.button--inverse.text-left(type="button")
             span Plan commute
             +svg("arrow-right")
-  section.section.background-default
-    include pug/components/team
   include pug/components/section-faq
   include pug/components/section-hiring
   include pug/components/section-apply

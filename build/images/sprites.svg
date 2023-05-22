@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+    <clipPath id="a">
+      <path data-name="Rectangle 966" d="M0 0h20.596v24H0z"/>
+    </clipPath>
+  
+    <clipPath id="a">
+      <path data-name="Rectangle 967" d="M0 0h20.596v24H0z"/>
+    </clipPath>
+  
+    <clipPath id="a">
+      <path data-name="Rectangle 225" transform="translate(-.426 .33)" d="M0 0h100v100H0z"/>
+    </clipPath>
+  </defs>
+<symbol id="arrow-down" viewBox="0 0 14.1 15">
+  <path d="M5.8 0v10.9L0 7.2v3L7.1 15l7-4.8v-3l-5.8 3.7V0H5.8z"/>
+</symbol>
+<symbol id="arrow-right" viewBox="0 0 15 14.1">
+  <path d="M0 8.3h10.9l-3.7 5.8h3L15 7l-4.8-7h-3l3.7 5.8H0v2.5z"/>
+</symbol>
+<symbol id="audio-backward" viewBox="0 0 20.596 24">
+  
+  <g data-name="Group 539">
+    <g data-name="Group 538" clip-path="url(#a)">
+      <path data-name="Path 3464" d="M10.3 24a10.119 10.119 0 0 1-4.019-.8A10.27 10.27 0 0 1 .8 17.721 10.119 10.119 0 0 1 0 13.7h1.716a8.284 8.284 0 0 0 2.5 6.079 8.27 8.27 0 0 0 6.084 2.5 8.279 8.279 0 0 0 6.084-2.5 8.279 8.279 0 0 0 2.5-6.084 8.4 8.4 0 0 0-2.431-6.084 8.049 8.049 0 0 0-6.007-2.5h-.634L11.9 7.209l-1.2 1.2-4.207-4.204L10.7 0l1.173 1.173L9.64 3.4h.66a10.119 10.119 0 0 1 4.019.8 10.27 10.27 0 0 1 5.478 5.478 10.119 10.119 0 0 1 .8 4.019 10.119 10.119 0 0 1-.8 4.019 10.27 10.27 0 0 1-5.48 5.484 10.119 10.119 0 0 1-4.017.8m-3.435-6.579v-6.065H5.321v-1.4H8.3v7.466Z"/>
+      <path data-name="Path 3465" d="M9.726 17.421v-1.43h3.633v-1.6H9.726V9.955h5.035v1.4h-3.6v1.631h2.632a.977.977 0 0 1 .973.973v2.489a.977.977 0 0 1-.973.973Z"/>
+    </g>
+  </g>
+</symbol>
+<symbol id="audio-forward" viewBox="0 0 20.596 24">
+  
+  <g data-name="Group 541">
+    <g data-name="Group 540" clip-path="url(#a)">
+      <path data-name="Path 3466" d="M6.279 23.2A10.27 10.27 0 0 1 .8 17.721 10.119 10.119 0 0 1 0 13.7a10.119 10.119 0 0 1 .8-4.017 10.27 10.27 0 0 1 5.479-5.478A10.119 10.119 0 0 1 10.3 3.4h.658L8.725 1.173 9.9 0l4.2 4.205L9.9 8.41l-1.2-1.2 2.084-2.09h-.629a8.049 8.049 0 0 0-6.007 2.5 8.4 8.4 0 0 0-2.432 6.08 8.279 8.279 0 0 0 2.5 6.084 8.279 8.279 0 0 0 6.084 2.5 8.27 8.27 0 0 0 6.084-2.5 8.284 8.284 0 0 0 2.5-6.079H20.6a10.119 10.119 0 0 1-.8 4.019 10.27 10.27 0 0 1-5.483 5.476 10.119 10.119 0 0 1-4.017.8 10.119 10.119 0 0 1-4.019-.8m1.1-5.778v-6.066H5.836v-1.4H8.81v7.466Zm2.861 0V15.99h3.633v-1.6h-3.634V9.955h5.035v1.4h-3.6v1.631H14.3a.977.977 0 0 1 .973.973v2.489a.977.977 0 0 1-.973.973Z"/>
+    </g>
+  </g>
+</symbol>
+<symbol id="check" viewBox="0 0 15 15">
+  <path d="M6.394 10.912 11.7 5.606l-.863-.844-4.444 4.444-2.25-2.25-.844.844ZM7.5 7.5Z" data-name="Group 738"/>
+</symbol>
+<symbol id="checkmark" viewBox="0 0 24 24">
+  <g data-name="Group 275" transform="translate(-952 -1765)">
+    <circle data-name="Ellipse 15" cx="12" cy="12" r="12" transform="translate(952 1765)"/>
+    <path d="m962.325 1782.621 8.568-8.568-1.393-1.363-7.176 7.176-3.633-3.633-1.362 1.362Zm1.784-5.511Z" fill="#fff"/>
+  </g>
+</symbol>
+<symbol id="chevron-down" viewBox="0 0 9.899 9.9">
+  <path data-name="Path 2417" d="M.707 4.243 4.95 8.485l4.242-4.242" fill="none"/>
+</symbol>
+<symbol id="chevron-left" viewBox="0 0 9.9 9.899">
+  <path data-name="Path 2624" d="M5.658.707 1.416 4.95l4.242 4.242" fill="none"/>
+</symbol>
+<symbol id="chevron-right" viewBox="0 0 9.9 9.899">
+  <path data-name="Path 2423" d="M4.243 9.192 8.485 4.95 4.243.707" fill="none"/>
+</symbol>
+<symbol id="close" viewBox="0 0 24.056 23.435">
+  <g data-name="Group 718" fill="none" stroke-width="2">
+    <path data-name="Line 54" d="m.696.717 22.664 22"/>
+    <path data-name="Line 55" d="m23.36.717-22.664 22"/>
+  </g>
+</symbol>
+<symbol id="menu" viewBox="0 0 25.114 16.744">
+  <path data-name="Path 1565" d="M0 16.744h25.114v-2.093H0Zm0-7.325h25.114V7.326H0Zm0-7.325h25.114V.001H0Z" fill="#fff"/>
+</symbol>
+<symbol id="money" viewBox="0 0 18.795 13.669">
+  <path data-name="payments_FILL0_wght400_GRAD0_opsz48 (1)" d="M10.679 8.116a2.552 2.552 0 1 1 1.815-.748 2.472 2.472 0 0 1-1.815.748Zm-6.835 2.99a1.285 1.285 0 0 1-1.281-1.281V1.282A1.285 1.285 0 0 1 3.844 0h13.669a1.285 1.285 0 0 1 1.281 1.281v8.543a1.285 1.285 0 0 1-1.281 1.281ZM5.98 9.825h9.4a2.115 2.115 0 0 1 2.136-2.136V3.417a2.115 2.115 0 0 1-2.136-2.136h-9.4a2.115 2.115 0 0 1-2.136 2.136v4.272A2.115 2.115 0 0 1 5.98 9.825Zm10.252 3.844H1.281A1.285 1.285 0 0 1 0 12.388V2.563h1.281v9.825h14.951ZM3.844 9.825Z"/>
+</symbol>
+<symbol id="play" viewBox="0 0 100 100">
+  
+  <g data-name="Group 227">
+    <g data-name="Group 164" clip-path="url(#a)" transform="translate(.426 -.33)">
+      <path data-name="Path 1568" d="M49.928-.354a49.929 49.929 0 1 0 49.93 49.929A49.929 49.929 0 0 0 49.928-.354m23.583 53.151L37.65 73.501a3.72 3.72 0 0 1-5.579-3.221V28.871a3.72 3.72 0 0 1 5.579-3.225l35.861 20.7a3.719 3.719 0 0 1 0 6.443"/>
+    </g>
+  </g>
+</symbol>
+<symbol id="plus" viewBox="0 0 20 20">
+  <path d="M9 1h1v17H9z"/>
+  <path d="M1 9h17v1H1z"/>
+</symbol>
+<symbol id="triangle-down" viewBox="0 0 531.74 460.5">
+  <path d="m530.874.5-265.004 459L.866.5z"/>
+</symbol>
+<symbol id="triangle-up" viewBox="0 0 531.74 460.5">
+  <path d="M.866 460 265.87 1l265.004 459z"/>
+</symbol>
+<symbol id="upload" viewBox="0 0 25.12 31.403">
+  <path d="M11.462 26.614h2.355v-7.89l3.219 3.219 1.649-1.649-6.124-5.967-6.045 6.045 1.649 1.649 3.3-3.3Zm-9.107 4.789A2.415 2.415 0 0 1 0 29.048V2.355A2.415 2.415 0 0 1 2.355 0h14.171l8.6 8.6v20.451a2.415 2.415 0 0 1-2.355 2.355ZM15.348 9.656v-7.3H2.355v26.693h20.412V9.657Zm-12.993-7.3Z"/>
+</symbol>
+<symbol id="volume" viewBox="0 0 21.234 20.644">
+  <path data-name="volume_up_FILL0_wght400_GRAD0_opsz48 (1)" d="M12.976 20.644v-1.828a8.877 8.877 0 0 0 4.674-3.17 8.47 8.47 0 0 0 1.814-5.323 8.791 8.791 0 0 0-6.488-8.493V0a10.572 10.572 0 0 1 0 20.644ZM0 13.89V6.812h4.719l5.9-5.9v18.874l-5.9-5.9Zm12.386 1.416V5.367a4.76 4.76 0 0 1 2.58 1.887 5.32 5.32 0 0 1 .958 3.1 5.218 5.218 0 0 1-.973 3.067 4.833 4.833 0 0 1-2.565 1.885ZM8.847 5.397 5.515 8.582H1.77v3.539h3.745l3.332 3.215Zm-2.772 4.954Z"/>
+</symbol>
+</svg>

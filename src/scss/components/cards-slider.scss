@@ -1,4 +1,12 @@
 .cards-slider {
+  padding-bottom: 40px;
+  background-color: $color-sky-blue;
+
+  @include laptop {
+    padding-bottom: 0;
+    background-color: transparent;
+  }
+
   &__inner {
     height: auto;
   }
@@ -24,10 +32,26 @@
 
   &__pagination {
     position: static;
-    padding: 40px 15px 0;
+    padding: 20px 15px 0;
 
     @include laptop {
       display: none;
     }
+  }
+
+  .pagination__link {
+    color: $color-primary;
+
+    &:focus,
+    &:hover,
+    &:active {
+      border-color: $color-primary;
+      color: $color-primary;
+    }
+  }
+
+  .pagination__link.swiper-pagination-bullet-active {
+    border-color: $color-primary;
+    color: $color-primary;
   }
 }

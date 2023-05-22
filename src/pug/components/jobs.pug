@@ -1,6 +1,8 @@
-section.section.background-default
+section.section.background-default.overflow-hidden
   .container
-    h2.h2.text-center.text-primary-light LATEST JOBS
+    h2.h2.text-center.text-primary-light.section-header-line.section-header-line--center.section-header-line--left
+      span Latest jobs
+        img(src="./images/horizontal-line-left.svg" alt="horizontal line." data-scrollspy="animate__fadeInLeft")
     +cardsSlider(
       {
         job: true,

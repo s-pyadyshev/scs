@@ -3,7 +3,7 @@
 
   @include tablet {
     background-color: $color-primary;
-    margin-bottom: calc((calc(calc(100vw * 443 / 1024) / -2)) - 100px);
+    margin-bottom: calc((calc(calc(100vw * 443 / 1024) / -2)) - 60px);
   }
 
   @include desktop {
@@ -31,17 +31,21 @@
   }
 
   + section {
-    padding-top: calc(
-      calc(calc(100vw * 443 / 1024) / 2) + $section-padding-vertical + 20px
-    );
+
+    @include tablet {
+      padding-top: calc(
+        calc(calc(100vw * 443 / 1024) / 2) + $section-padding-vertical + 60px
+      );
+    }
 
     @include desktop {
-      padding-top: 0;
+      padding-top: 80px;
     }
   }
 
   &.section {
     padding-top: 0;
+    padding-bottom: 0;
   }
 
   &__slider {

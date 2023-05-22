@@ -1,7 +1,5 @@
 .fsb-select,
 .fsb-original-select {
-  border: $fsb-border;
-  border-color: $color-white;
   background-color: $color-white;
 }
 
@@ -25,6 +23,12 @@
     right: 20px;
     @include triangle(to bottom, 16px, 10px, $color-light-gray);
     transform: translateY(-35%) rotateZ(0deg);
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    border-color: $color-primary !important;
   }
 }
 

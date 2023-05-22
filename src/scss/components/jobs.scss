@@ -1,5 +1,4 @@
 .page-header-primary {
-  background-image: url("../images/team@2x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -86,7 +85,7 @@
   }
 }
 
-.section-job__vacation > li {
+.section-job__vacation>li {
   padding: 40px 0;
 }
 
@@ -108,11 +107,11 @@
   list-style-type: none;
 }
 
-.section-job__vacation > li:last-child {
+.section-job__vacation>li:last-child {
   border-bottom: 1px solid $color-white;
 }
 
-.section-job__vacation > li {
+.section-job__vacation>li {
   border-top: 1px solid $color-white;
 }
 
@@ -163,9 +162,11 @@
   @include tablet {
     order: 0;
   }
+
   @include tablet {
     padding: 20px 28px 0 0;
   }
+
   @include desktop {
     padding: 0;
   }
@@ -182,6 +183,7 @@
 .search-filter-forms .form-group:last-child {
   margin-bottom: 22px;
 }
+
 .section-job__search {
   border-bottom: 20px solid transparent;
 }
@@ -193,6 +195,7 @@
   @include tablet {
     padding: 38px 18px;
   }
+
   @include desktop {
     padding: 0;
   }

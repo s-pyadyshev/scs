@@ -8,6 +8,16 @@
   @include tablet {
     flex-direction: row;
     gap: 0;
+
+    &:focus,
+    &:hover,
+    &:active {
+
+      input,
+      .select~.fsb-select {
+        border-color: $color-primary;
+      }
+    }
   }
 
   &::after {
@@ -35,7 +45,6 @@
   input {
     width: 100%;
     border-radius: 0;
-    border-right: none;
     margin: 0;
 
     &::placeholder {
@@ -44,13 +53,16 @@
 
     &:focus,
     &:active {
-      & ~ .select ~ .fsb-select {
+      border-color: $color-primary;
+
+      &~.select~.fsb-select {
         border-color: $color-primary;
       }
     }
 
     @include tablet {
       padding: 9px 20px;
+      border-right: none;
     }
 
     @include desktop {
@@ -58,17 +70,23 @@
     }
   }
 
-  .select ~ .fsb-select {
+  .select~.fsb-select {
     min-width: 136px;
     background-color: $color-white;
     border-radius: 0;
     border: 1px solid $color-muted;
-    border-left: none;
     width: 100%;
+    transition-property: border-color;
+    transition-duration: $transition-duration;
+
+    &:active {
+      border-color: $color-primary;
+    }
 
     @include tablet {
       width: auto;
       min-width: 118px;
+      border-left: none;
     }
 
     @include desktop {
@@ -82,7 +100,8 @@
       padding-left: 24px !important;
       transition: 0s;
       text-transform: none;
-      padding: 10px 25px 10px 11px !important;
+      padding: 11px 25px 11px 11px !important;
+      border: none !important;
 
       @include tablet {
         padding: 9px 25px 9px 11px !important;
@@ -113,7 +132,11 @@
         margin: auto 0;
 
         @include tablet {
-          right: 22px;
+          right: 10px;
+        }
+        
+        @include desktop {
+          right: 20px;
         }
       }
     }
@@ -128,14 +151,15 @@
     }
   }
 
-  &:focus,
-  &:hover,
-  &:active {
-    input,
-    .select ~ .fsb-select {
-      border-color: $color-primary;
-      border-right: 1px solid $color-primary;
-      border-left: 1px solid $color-primary;
-    }
-  }
+  // &:focus,
+  // &:hover,
+  // &:active {
+  //   input,
+  //   .select ~ .fsb-select {
+  //     border-color: $color-primary;
+  //     border-right: 1px solid $color-primary;
+  //     border-left: 1px solid $color-primary;
+
+  //   }
+  // }
 }

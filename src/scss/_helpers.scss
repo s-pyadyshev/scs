@@ -109,3 +109,51 @@
   height: 1px;
   clip: rect(0 0 0 0);
 }
+
+.section-header-line {
+
+  span {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  img {
+    display: none;
+    position: absolute;
+    left: calc(100% + 40px);
+    max-width: none;
+    height: 17px;
+    z-index: 1;
+
+    @media (min-width: 375px) {
+      display: block;
+    }
+
+    @include desktop {
+      left: calc(100% + 80px);
+      height: 26px;
+    }
+  }
+
+  &--center {
+
+    @include tablet {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &--left {
+    img {
+      left: auto;
+      right: calc(100% + 40px);
+
+      @include desktop {
+        left: auto;
+        right: calc(100% + 80px);
+      }
+    }
+  }
+}

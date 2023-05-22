@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta color-scheme="dark light">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width">
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="en_GB">
+		<meta property="og:title" content="Homepage">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Homepage">
+		<title>Homepage</title><link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+		<link rel="stylesheet" href="./css/main.css?v=1684752627464">
+	</head>
+	<body>
+		<div class="page-wrapper">
+			<header class="header">
+				<div class="container">
+					<div class="header__inner"><a class="logo" href="/home.html"><img src="images/logo.svg" alt="alt."></a>
+						<nav class="navbar" aria-label="main navigation">
+							<ul class="navbar__list">
+								<li><a class="navbar__link" href="/joint-venture.html">The Joint Venture</a></li>
+								<li><a class="navbar__link" href="/life-at-scs.html">Life at SCS</a></li>
+								<li><a class="navbar__link" href="/jobs.html">Jobs</a></li>
+							</ul>
+						</nav>
+						<div class="header__menu-toggle">
+							<button class="menu-toggle-open js-toggle-menu" type="button">
+								<svg>
+									<use xlink:href="./images/sprites.svg#menu"></use>
+								</svg>
+							</button>
+							<button class="menu-toggle-close js-toggle-menu" type="button">
+								<svg>
+									<use xlink:href="./images/sprites.svg#close"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+				<section class="search bar js-search background-secondary" id="search">
+					<div class="container">
+						<button class="search__select button button--inverse" type="button" data-collapse-target="search-form">Job search</button>
+						<form class="search__form" action="#" method="post" data-collapse-content="search-form">
+							<div class="search__job-title">
+								<input class="input full-width" id="search-job" name="search-job" placeholder="Job title, skill or company"/>
+							</div>
+							<div class="search__area">
+								<div class="select-area">
+									<input class="input" id="search-area" name="search-area" placeholder="Town, city or postcode"/>
+									<select class="select" name="select-area">
+										<option value="5 miles">5 miles</option>
+										<option value="10 miles">10 miles</option>
+										<option value="15 miles">15 miles</option>
+										<option value="25 miles">25 miles</option>
+									</select>
+								</div>
+							</div>
+							<button class="button button--inverse full-width text-center" type="submit">Job search</button>
+						</form>
+					</div>
+				</section>
+				<section class="section welcome background-default">
+					<div class="welcome__inner">
+						<div class="welcome__line"><img src="../../images/decor-vertical-line.svg" alt=""></div>
+						<picture class="welcome__background">
+							<source srcset="../../images/welcome-bg.jpg" type="image/jpeg" media="(min-width: 768px)"><img src="../../images/welcome-bg-mobile.jpg" alt="">
+						</picture>
+						<div class="container">
+							<div class="welcome__wrap">
+								<h1 class="h1"><span data-first-title-word>FREEDOM TO </span><span class="text-center" data-other-title-words>
+										ACHIEVE THE EXTRAORDINARY</span></h1>
+								<div class="welcome__description">
+									<p>The biggest breakthroughs happen when the best minds are encouraged to think for themselves. We want you to be one of them.</p>
+								</div>
+								<button class="button button--inverse full-width" data-scrollto="#partnership">DISCOVER CAREERS AT SCS JV
+									<svg>
+										<use xlink:href="./images/sprites.svg#arrow-down"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section partnership background-default" id="partnership">
+					<div class="container">
+						<div class="about-job about-job--small">
+							<div class="about-job__image about-job--small" data-image-fade-in="data-image-fade-in"><img src="./images/worker.jpg" alt=""/></div>
+							<div class="about-job__inner">
+								<div class="about-job__wrapper">
+									<div class="about-job__line" data-scrollspy="animate__fadeInLeft"><img src="images/horizontal-line-left.svg" alt=""/></div>
+									<h4 class="h4">A groundbreaking partnership</h4>
+									<div class="about-job__description">
+										<p>HS2 is the largest construction project in Europe. It will link the north and south of the UK for the first time in history.</p>
+										<p>SCS Joint Venture is constructing 13 miles of twin-bore tunnels on the HS2 route to its southern terminus at London Euston. It will run 6 state-of-the-art tunnel boring machines, of which 5 will run simultaneously.</p>
+									</div>
+								</div><a class="button button--inverse" href="/" title="Discover more">Discover more
+									<svg>
+										<use xlink:href="./images/sprites.svg#arrow-right"></use>
+									</svg></a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section main-video background-default">
+					<div class="container">
+						<div class="main-video__wrap">
+							<div class="video">
+								<div class="video__overlay"><img src="./images/poster.jpg" alt=""/></div>
+								<iframe src="https://player.vimeo.com/video/46926279" width="100%" height="564" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+								<button class="video__play js-play-video">
+									<svg>
+										<use xlink:href="./images/sprites.svg#play"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section insights background-default">
+					<div class="container">
+						<h4 class="h4 text-primary-light section-header-line"><span>A culture of innovation<img src="./images/horizontal-line-right.svg" alt="horizontal line." data-scrollspy="animate__fadeInRight"></span></h4>
+						<div class="insights__text-wrap">
+							<div>
+								<p>We believe in giving people the freedom to solve big problems with big ideas.</p>
+								<p>At SCS JV, that means ensuring our employees have the opportunity to move around the project, work flexibly, collaborate with others and find new ways of working. This enables them to solve the hardest problems in construction and develop an industry-changing approach that will achieve groundbreaking results.</p>
+							</div>
+							<div>
+								<p>We place great importance on teamwork – whether you’re on the ground or in the office. And as a diverse, multicultural and mutli-disciplinary company, SCS is a place where you can grow both professionally and personally.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section project background-default">
+					<picture class="project__bg">
+						<source srcset="./images/latest-project-desk.jpg" type="image/jpeg" media="(min-width: 1024px)"><img src="./images/latest-project.jpg" alt="">
+					</picture>
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-10 offset-xl-1">
+								<div class="about-job about-job--reverse">
+									<div class="about-job__image about-job--reverse"><img src="./images/people-office.jpg" alt=""/></div>
+									<div class="about-job__inner">
+										<div class="about-job__wrapper">
+											<h4 class="h4">LATEST FROM THE PROJECT</h4>
+											<div class="about-job__description">
+												<p>2022 was a year of huge progress for the project, with a series of momentous milestones achieved and permanent HS2 structures taking shape across the route. We recently celebrated another major milestone, with over 1,000 apprentice starts now confirmed on our levelling up project.</p>
+											</div><a class="button button--inverse" href="/" title="WHY WORK HERE">WHY WORK HERE
+												<svg>
+													<use xlink:href="./images/sprites.svg#arrow-right"></use>
+												</svg></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section background-default overflow-hidden">
+					<div class="container">
+						<h2 class="h2 text-center text-primary-light section-header-line section-header-line--center section-header-line--left"><span>Latest jobs<img src="./images/horizontal-line-left.svg" alt="horizontal line." data-scrollspy="animate__fadeInLeft"></span></h2>
+						<div class="cards-slider swiper js-cards-slider">
+							<div class="cards-slider__inner swiper-wrapper">
+								<div class="cards-slider__item swiper-slide">
+									<div class="card-job">
+										<h4 class="card-job__title">SENIOR GENERAL FOREMAN</h4>
+										<div class="card-job__info">
+											<div class="card-job__row"><span class="card-job__unit">partner:</span><span class="card-job__value">skanska</span></div>
+											<div class="card-job__row"><span class="card-job__unit">location:</span><span class="card-job__value">north acton, london</span></div>
+											<div class="card-job__row"><span class="card-job__unit">contract type:</span><span class="card-job__value">permanent</span></div>
+											<div class="card-job__row"><span class="card-job__unit">salary:</span><span class="card-job__value">competitive</span></div>
+										</div>
+										<div class="card-job__description">
+											<p class="card-job__text">To assist the asset leads with the planning, sequencing, methodology and design constructability of the Old Oak Common (OOC) Tunnel Boring Machine (TBM) launch site for the S1 Euston Tunnels.</p>
+										</div>
+										<button class="button button--inverse text-left" type="button"><span>view role</span>
+											<svg>
+												<use xlink:href="./images/sprites.svg#arrow-right"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="cards-slider__item swiper-slide">
+									<div class="card-job">
+										<h4 class="card-job__title">ASSISTANT MATERIALS ENGINEER</h4>
+										<div class="card-job__info">
+											<div class="card-job__row"><span class="card-job__unit">partner:</span><span class="card-job__value">skanska</span></div>
+											<div class="card-job__row"><span class="card-job__unit">location:</span><span class="card-job__value">north acton, london</span></div>
+											<div class="card-job__row"><span class="card-job__unit">contract type:</span><span class="card-job__value">permanent</span></div>
+											<div class="card-job__row"><span class="card-job__unit">salary:</span><span class="card-job__value">competitive</span></div>
+										</div>
+										<div class="card-job__description">
+											<p class="card-job__text">To assist the asset leads with the planning, sequencing, methodology and design constructability of the Old Oak Common (OOC) Tunnel Boring Machine (TBM) launch site for the S1 Euston Tunnels.</p>
+										</div>
+										<button class="button button--inverse text-left" type="button"><span>view role</span>
+											<svg>
+												<use xlink:href="./images/sprites.svg#arrow-right"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="cards-slider__item swiper-slide">
+									<div class="card-job">
+										<h4 class="card-job__title">PACKAGE TEMPORARY WORKS COORDINATOR</h4>
+										<div class="card-job__info">
+											<div class="card-job__row"><span class="card-job__unit">partner:</span><span class="card-job__value">skanska</span></div>
+											<div class="card-job__row"><span class="card-job__unit">location:</span><span class="card-job__value">north acton, london</span></div>
+											<div class="card-job__row"><span class="card-job__unit">contract type:</span><span class="card-job__value">permanent</span></div>
+											<div class="card-job__row"><span class="card-job__unit">salary:</span><span class="card-job__value">competitive</span></div>
+										</div>
+										<div class="card-job__description">
+											<p class="card-job__text">To assist the asset leads with the planning, sequencing, methodology and design constructability of the Old Oak Common (OOC) Tunnel Boring Machine (TBM) launch site for the S1 Euston Tunnels.</p>
+										</div>
+										<button class="button button--inverse text-left" type="button"><span>view role</span>
+											<svg>
+												<use xlink:href="./images/sprites.svg#arrow-right"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination pagination pagination--inverse cards-slider__pagination"></div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer background-primary">
+				<div class="container">
+					<div class="footer__inner">
+						<div class="footer__logo"> <a class="logo" href="/"><img src="images/logo.svg" alt="alt."></a></div>
+						<div class="footer__links"> <a href="">Privacy Policy</a><a href="">Cookies Policy</a></div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script src="https://player.vimeo.com/api/player.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="./js/vendor.js?v=1684752627466"></script>
+		<script src="./js/main.js?v=1684752627466"></script>
+	</body>
+</html>

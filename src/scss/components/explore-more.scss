@@ -1,0 +1,11 @@
+.explore-more {
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px 50px;
+
+        @include desktop {
+            gap: 40px 122px;
+        }
+    }
+}

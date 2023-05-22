@@ -1,0 +1,18 @@
+section.section.explore-more.overflow-hidden.background-light
+  .container
+    h2.h2.text-primary.section-header-line
+      span Explore more
+        img(src="./images/horizontal-line-right.svg" alt="horizontal line." data-scrollspy="animate__fadeInRight")
+    .explore-more__wrapper
+      +card-more({
+          src: "./images/tunnel.jpg",
+          title: "About the joint venture",
+          description: "Find out more about the industry-changing partnership between Skanska, Costain and STRABAG.",
+          button: "Read more"
+      })
+      +card-more({
+          src: "./images/worker-6.jpg",
+          title: "Job search",
+          description: "Search our latest vacancies now.",
+          button: "View lobs"
+      })

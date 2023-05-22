@@ -2,9 +2,6 @@
   overflow: hidden;
 
   h2 {
-    @include tablet {
-      text-align: center;
-    }
 
     @include desktop {
       margin-bottom: 80px;

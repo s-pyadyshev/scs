@@ -98,8 +98,18 @@ $button-color-active: $color-white;
       border-color: $color-white;
       color: $color-secondary;
 
+      .background-default & {
+        background-color: transparent;
+        border-color: $color-primary-light;
+        color: $color-primary-light;
+      }
+
       svg {
         fill: $color-secondary;
+
+        .background-default & {
+          fill: $color-primary-light;
+        }
       }
     }
 
@@ -109,6 +119,7 @@ $button-color-active: $color-white;
   }
 
   &--inverse-secondary {
+    background-color: transparent;
     border-color: $color-primary;
     color: $color-primary;
 

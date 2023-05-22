@@ -45,7 +45,7 @@ select::-ms-expand {
   width: inherit;
 }
 
-select[disabled] + .fsb-select {
+select[disabled]+.fsb-select {
   cursor: not-allowed;
 }
 
@@ -88,10 +88,8 @@ select[disabled] + .fsb-select {
   height: 100% !important;
   padding: 8px 22px 8px 8px !important;
   padding: $fsb-padding !important;
-  padding-right: calc(
-    $fsb-arrow-size + $fsb-arrow-padding + $fsb-padding-right
-  ) !important;
-  border: 0 !important;
+  padding-right: calc($fsb-arrow-size + $fsb-arrow-padding + $fsb-padding-right ) !important;
+  border: 1px solid transparent !important;
   border-radius: inherit !important;
   color: inherit !important;
   background-color: inherit !important;
@@ -105,24 +103,24 @@ select[disabled] + .fsb-select {
   text-transform: uppercase;
 }
 
-.fsb-button > span {
+.fsb-button>span {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-.fsb-button > span,
-.fsb-option > span {
+.fsb-button>span,
+.fsb-option>span {
   pointer-events: none;
 }
 
-select[disabled] + .fsb-select .fsb-button {
+select[disabled]+.fsb-select .fsb-button {
   opacity: 0.4;
   pointer-events: none;
 }
 
 .fsb-button:after,
-select[disabled] + .fsb-select .fsb-button[aria-expanded="true"]:after {
+select[disabled]+.fsb-select .fsb-button[aria-expanded="true"]:after {
   content: "";
   display: block;
   position: absolute;
@@ -173,7 +171,7 @@ select[disabled] + .fsb-select .fsb-button[aria-expanded="true"]:after {
 }
 
 .fsb-list,
-select[disabled] + .fsb-select .fsb-list {
+select[disabled]+.fsb-select .fsb-list {
   display: block;
   visibility: hidden;
   position: absolute;
@@ -194,7 +192,7 @@ select[disabled] + .fsb-select .fsb-list {
   background-color: inherit;
   background-color: $fsb-list-background;
   opacity: 0;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   overflow: auto;
 }
 
@@ -203,7 +201,7 @@ select[disabled] + .fsb-select .fsb-list {
   bottom: 100%;
 }
 
-.fsb-button[aria-expanded="true"] + .fsb-list {
+.fsb-button[aria-expanded="true"]+.fsb-list {
   height: auto;
   max-height: $fsb-list-height;
   visibility: visible;
@@ -233,12 +231,10 @@ select[disabled] + .fsb-select .fsb-list {
   display: block;
   height: 0;
   padding-right: 14px;
-  padding-right: calc(
-    $fsb-arrow-padding * 2 + $fsb-arrow-size - $fsb-padding-right
-  );
+  padding-right: calc($fsb-arrow-padding * 2 + $fsb-arrow-size - $fsb-padding-right );
   box-sizing: border-box;
 }
 
-.fsb-resize > * {
+.fsb-resize>* {
   display: block;
 }

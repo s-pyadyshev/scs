@@ -1,0 +1,67 @@
+.card-more {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+
+  @include tablet {
+    width: calc(50% - 25px);
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    width: calc(50% - 61px);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__img {
+    margin-bottom: 20px;
+    height: calc(100vw * 225 / 393);
+
+    @include tablet {
+      height: calc(100vw * 225 / 1024);
+    }
+
+    @include desktop {
+      height: calc(100vw * 379 / 1920);
+      max-height: 379px;
+      margin-bottom: 40px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    @include desktop {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__description {
+    color: $color-dark-gray;
+
+    p {
+      @include desktop {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .button {
+    margin-top: auto;
+
+    @include desktop {
+      min-width: 293px;
+      max-width: none;
+      align-self: flex-start;
+    }
+  }
+}

@@ -10,6 +10,8 @@
   background-color: $color-white;
   color: $input-color;
   width: inherit;
+  transition-property: border-color;
+  transition-duration: $transition-duration;
 
   @include laptop {
     font-size: $input-font-size-desktop;
@@ -17,20 +19,12 @@
     padding: $input-padding-desktop;
   }
 
-  &:focus {
-    border-color: $input-border-color-hover;
-  }
-
-  &:hover {
-    border-color: $input-border-color-hover;
-  }
-
+  &:focus,
+  &:hover,
   &:active {
     border-color: $input-border-color-hover;
-  }
-
-  &:focus-visible {
-    outline: none;
+    transition-property: border-color;
+    transition-duration: $transition-duration;
   }
 
   @include placeholder {

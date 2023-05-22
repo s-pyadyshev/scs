@@ -50,16 +50,11 @@
       margin-right: 0;
       margin-left: 0;
 
-      @include tablet {
-        height: calc(100vw * 443 / 788);
+      @include laptop {
+        height: 788px;
       }
 
       @include desktop {
-        height: calc(100vw * 611 / 1088);
-        max-height: 100vh;
-      }
-
-      @media (min-width: 1920px) {
         height: 611px;
       }
 
