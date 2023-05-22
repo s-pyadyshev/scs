@@ -1,7 +1,7 @@
 mixin cardFacts(data)
   .card-facts
     .card-facts__icon
-      img(src= data.src alt="" data-scrollspy="animate__displayIn")
+      img(src= data.src alt="icon." data-scrollspy="animate__displayIn")
     h4.card-facts__title !{data.title}
     .card-facts__content
       each text in data.text
