@@ -1,13 +1,7 @@
 .accordion-list {
   list-style-type: none;
-  margin: 0 -12px;
 
   @include laptop {
-    width: 50%;
-    margin: 0;
-  }
-
-  @include desktop {
     width: 100%;
   }
 }
@@ -26,7 +20,7 @@
   font-size: 16px;
   line-height: 22px;
   padding: 0 5% 0 1%;
-  margin-bottom: 16px;
+  margin-bottom: 30px;
   animation: fadeInDown;
   animation-duration: 0.5s;
   animation-fill-mode: both;
@@ -53,8 +47,8 @@
 }
 
 .accordion__header {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   @include desktop {
     padding-top: 25px;
@@ -91,12 +85,17 @@
   color: $color-white;
   font-family: $font-secondary;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 12px;
   letter-spacing: 0;
   text-align: left;
-  line-height: 26px;
+  line-height: 15px;
   padding-right: 16px;
   margin-bottom: 0;
+
+  @include laptop {
+    font-size: 20px;
+    line-height: 24px;
+  }
 
   @include desktop {
     font-size: 26px;
