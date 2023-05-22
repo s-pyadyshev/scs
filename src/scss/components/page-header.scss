@@ -86,7 +86,7 @@
     padding: 232px 0 0 0;
   }
 
-  >* {
+  > * {
     @include tablet {
       display: grid;
       align-items: end;
