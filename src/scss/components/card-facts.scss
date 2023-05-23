@@ -21,9 +21,10 @@
     border-radius: 50%;
     background-color: $color-primary;
 
-    >img {
+    > img {
       width: inherit;
       height: inherit;
+      opacity: 1;
     }
 
     @include laptop {
@@ -37,7 +38,7 @@
     }
   }
 
-  h3 {
+  h4 {
     font-family: $font-secondary;
     align-self: center;
     margin-bottom: 40px;

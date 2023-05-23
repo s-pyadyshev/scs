@@ -20,11 +20,7 @@
 
 .section-overlap {
   display: grid;
-  grid-template: repeat(4, [row] auto) / repeat(1, [col] 1fr);
-
-  @include laptop {
-    grid-template: repeat(4, [row] 1fr) / repeat(1, [col] 1fr);
-  }
+  grid-template: 1fr 1fr 1fr auto / repeat(1, [col] 1fr);
 
   > *:first-child {
     grid-column: 1;
