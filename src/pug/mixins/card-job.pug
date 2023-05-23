@@ -1,6 +1,6 @@
 mixin cardJob(data)
   .card-job
-    h4.card-job__title= data.title
+    h4= data.title
     .card-job__info
       each row in data.rows
         .card-job__row
@@ -8,7 +8,7 @@ mixin cardJob(data)
           span.card-job__value=row.value
     .card-job__description
       each text in data.text
-        p.card-job__text !{text.description}
+        p !{text.description}
     button.button.button--inverse.text-left(type="button")
       span= data.button
       +svg('arrow-right')

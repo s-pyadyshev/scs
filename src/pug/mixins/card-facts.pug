@@ -2,10 +2,10 @@ mixin cardFacts(data)
   .card-facts
     .card-facts__icon
       img(src= data.src alt="" data-scrollspy="animate__displayIn")
-    h4.card-facts__title !{data.title}
+    h4 !{data.title}
     .card-facts__content
       each text in data.text
-        p.card-facts__text !{text.content}
+        p !{text.content}
     button.button.button--inverse.text-left(type="button")
       span WHY WORK HERE
       +svg('arrow-right')

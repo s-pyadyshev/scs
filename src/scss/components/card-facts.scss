@@ -21,7 +21,7 @@
     border-radius: 50%;
     background-color: $color-primary;
 
-    > img {
+    >img {
       width: inherit;
       height: inherit;
     }
@@ -37,7 +37,7 @@
     }
   }
 
-  &__title {
+  h3 {
     font-family: $font-secondary;
     align-self: center;
     margin-bottom: 40px;
@@ -66,7 +66,7 @@
     margin-top: auto;
   }
 
-  &__text {
+  p {
     font-size: 14px;
     line-height: 19px;
     color: $color-white;

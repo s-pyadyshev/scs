@@ -3863,7 +3863,7 @@ legend {
   background-color: #1e3773;
 }
 
-.card-job__title {
+.card-job h4 {
   margin-bottom: 40px;
   font-family: "OpenSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 20px;
@@ -3907,7 +3907,7 @@ legend {
   margin-bottom: auto;
 }
 
-.card-job__text {
+.card-job p {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 14px;
   line-height: 19px;
@@ -3957,7 +3957,7 @@ legend {
   height: inherit;
 }
 
-.card-facts__title {
+.card-facts h3 {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
@@ -3975,7 +3975,7 @@ legend {
   margin-top: auto;
 }
 
-.card-facts__text {
+.card-facts p {
   font-size: 14px;
   line-height: 19px;
   color: #fff;
@@ -4945,7 +4945,7 @@ legend {
   object-fit: cover;
 }
 
-.card-more__title {
+.card-more h4 {
   margin-bottom: 20px;
 }
 
@@ -6101,7 +6101,7 @@ legend {
     padding: 29px 20px 20px 20px;
   }
 
-  .card-job__title {
+  .card-job h4 {
     margin-bottom: 16px;
   }
 
@@ -6980,7 +6980,7 @@ legend {
     height: 134px;
   }
 
-  .card-facts__title {
+  .card-facts h3 {
     max-width: 190px;
     margin-bottom: 20px;
   }
@@ -7650,7 +7650,7 @@ legend {
     padding: 50px;
   }
 
-  .card-job__title {
+  .card-job h4 {
     max-width: 400px;
     margin-bottom: 31px;
     font-size: 26px;
@@ -7676,7 +7676,7 @@ legend {
     letter-spacing: 1.6px;
   }
 
-  .card-job__text {
+  .card-job p {
     font-size: 20px;
     line-height: 27px;
   }
@@ -7690,7 +7690,7 @@ legend {
     height: 200px;
   }
 
-  .card-facts__title {
+  .card-facts h3 {
     max-width: 400px;
     margin-bottom: 27px;
     font-size: 26px;
@@ -7698,7 +7698,7 @@ legend {
     letter-spacing: 2.6px;
   }
 
-  .card-facts__text {
+  .card-facts p {
     font-size: 20px;
     line-height: 27px;
   }
@@ -8171,7 +8171,7 @@ legend {
     margin-bottom: 40px;
   }
 
-  .card-more__title {
+  .card-more h4 {
     margin-bottom: 40px;
   }
 
