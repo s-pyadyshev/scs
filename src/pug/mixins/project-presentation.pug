@@ -1,12 +1,12 @@
 mixin project-presentation(obj)
   .about-job(class!=attributes.class)
     .about-job__image&attributes(attributes)
-      img(src= obj.src alt="")
+      img(src= obj.src alt="photo.")
     .about-job__inner
       .about-job__wrapper
         if obj.line
           .about-job__line(data-scrollspy="animate__fadeInLeft")
-            img(src="images/horizontal-line-left.svg" alt="" )
+            img(src="images/horizontal-line-left.svg" alt="photo.")
         h4.h4= obj.title
         .about-job__description
           each item in obj.items

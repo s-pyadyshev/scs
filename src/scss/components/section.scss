@@ -18,28 +18,6 @@
   }
 }
 
-.section--overlap-bottom {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 25% 75%;
-
-  >.section {
-    &:first-child {
-      position: relative;
-    }
-
-    +.section {
-      display: flex;
-      flex-direction: column;
-      padding-top: 0;
-
-      >* {
-        margin-top: auto;
-      }
-    }
-  }
-}
-
 .section-overlap {
   display: grid;
   grid-template: repeat(4, [row] auto) / repeat(1, [col] 1fr);
@@ -48,33 +26,47 @@
     grid-template: repeat(4, [row] 1fr) / repeat(1, [col] 1fr);
   }
 
-  >*:first-child {
+  > *:first-child {
     grid-column: 1;
     grid-row: 1/3;
   }
 
-  >*:nth-child(2) {
+  > *:nth-child(2) {
     grid-column: 1;
     grid-row: 2/4;
     height: 100%;
   }
 
-  >*:nth-child(3) {
+  > *:nth-child(3) {
     grid-column: 1;
     grid-row: 4;
   }
 }
 
-.section-faq {
-  padding-top: 0;
+.section-overlap-default {
+  position: relative;
+  z-index: 1;
 
-  .container {
-    padding-right: 0;
-    padding-left: 0;
+  > *::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-black;
+
+    @include laptop {
+      height: 50%;
+    }
   }
+}
 
-  .section {
-    padding-right: calc($container-padding-x / 2);
-    padding-left: calc($container-padding-x / 2);
+.block-overlap-top {
+  margin-top: -120px;
+
+  @include laptop {
+    margin-top: -240px;
   }
 }

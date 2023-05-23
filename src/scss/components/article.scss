@@ -39,4 +39,10 @@
       margin-bottom: 0;
     }
   }
+
+  &.article--collapsed {
+    @include laptop {
+      padding: 0;
+    }
+  }
 }

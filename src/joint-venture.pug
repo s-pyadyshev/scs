@@ -10,7 +10,7 @@ block content
   +search()
   .section-overlap.background-primary
     +page-header("A JOINT VENTURE TO BE PROUD OF", false, "./images/joint-venture-bg.jpg")
-    .main-video.main-video--small.main-video--overlap
+    .main-video.main-video--small
       .container
         .row
           .col-xl-8.offset-xl-2
@@ -25,23 +25,22 @@ block content
             p Together, SCS JV is delivering the London tunnels section of HS2, a high-speed rail network that will connect 30 million people. It’s a project of incredible scale and currently the largest construction project in Europe. The complexity of the task means that we are pioneering new methods and technologies, transforming the construction industry for future generations.
   include pug/components/company
   include pug/components/map
-  .section--overlap-bottom
-    section.section.pt-0
-      .container
-        section.section.background-primary.overflow-hidden
-          .row 
-            .col-lg-10.offset-lg-1
-              article.article
-                header.article__header
-                  h2 DELIVERING THE HS2 LONDON TUNNELS PROGRAMME
-                  img(src="images/horizontal-line-right-small.svg" alt="horizontal line." data-scrollspy="animate__fadeInRight")
-                .article__col-2
-                  p The London tunnels section will take HS2 underground at West Ruislip to travel 13 miles under the city to its terminal at Euston.
-                  p This involves constructing a huge tunnel portal at West Ruislip where the trains will enter and exit, five ventilation shafts between Camden and Ealing and a large crossover box at Victoria Road, which will allow trains to cross tracks just outside the platforms to the new Old Oak Common station.
-                  p The tunnels are built using 6 state-of-the-art tunnel boring machines (TBMs), 4 of which are already in use.
-                  p Each TBM is 140m long with a cutter head measuring 9.84m in diameter and weighs 2,050 tons. They will operate 24 hours a day,
-                  p 7 days a week and in total they will excavate 1.2 million cubic metres of earth.
-                  p The excavated earth is managed at our easternmost site at Willesden Junction, where our logistics team is responsible for removing 5.6 million tonnes to landfill. By using 8 trains a day, we’re removing up to 20 lorries from the roads and saving 40% in carbon emissions.
-                  p HS2’s London tunnels will help ensure many homes and habitats in the capital remain undisturbed, enabling SCS JV to deliver the project with minimum disruption to the environment.
-                  p This requires a team with exceptional knowledge and experience, but also with extraordinary problem-solving abilities.
-    include pug/components/facts
+  section.section.pt-0.pb-0.section-overlap-default
+    .container
+      section.section.background-primary.overflow-hidden
+        .row 
+          .col-lg-10.offset-lg-1
+            article.article.article--collapsed
+              header.article__header
+                h2 DELIVERING THE HS2 LONDON TUNNELS PROGRAMME
+                img(src="images/horizontal-line-right-small.svg" alt="horizontal line." data-scrollspy="animate__fadeInRight")
+              .article__col-2
+                p The London tunnels section will take HS2 underground at West Ruislip to travel 13 miles under the city to its terminal at Euston.
+                p This involves constructing a huge tunnel portal at West Ruislip where the trains will enter and exit, five ventilation shafts between Camden and Ealing and a large crossover box at Victoria Road, which will allow trains to cross tracks just outside the platforms to the new Old Oak Common station.
+                p The tunnels are built using 6 state-of-the-art tunnel boring machines (TBMs), 4 of which are already in use.
+                p Each TBM is 140m long with a cutter head measuring 9.84m in diameter and weighs 2,050 tons. They will operate 24 hours a day,
+                p 7 days a week and in total they will excavate 1.2 million cubic metres of earth.
+                p The excavated earth is managed at our easternmost site at Willesden Junction, where our logistics team is responsible for removing 5.6 million tonnes to landfill. By using 8 trains a day, we’re removing up to 20 lorries from the roads and saving 40% in carbon emissions.
+                p HS2’s London tunnels will help ensure many homes and habitats in the capital remain undisturbed, enabling SCS JV to deliver the project with minimum disruption to the environment.
+                p This requires a team with exceptional knowledge and experience, but also with extraordinary problem-solving abilities.
+  include pug/components/facts

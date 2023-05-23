@@ -1,7 +1,7 @@
 mixin life-slider(data)
   .life-slider
     .life-slider__bg
-      img(src="./images/life-slider-bg.jpg" alt="")
+      img(src="./images/life-slider-bg.jpg" alt="photo.")
     .life-slider__wrapper
       .life-slider__inner.swiper.js-life-slider
         .life-slider__title Our values
@@ -15,12 +15,12 @@ mixin life-slider(data)
                   each benefit in slide.benefits
                     .life-slider__benefit
                       .life-slider__benefit-icon
-                        img(src=benefit.src alt="")
+                        img(src=benefit.src alt="photo.")
                       .life-slider__benefit-title= benefit.title
               else
                 .life-slider__benefit.life-slider__benefit--big
                   .life-slider__benefit-icon
-                    img(src=slide.src alt="")
+                    img(src=slide.src alt="photo.")
                   .life-slider__benefit-title= slide.title
                 .life-slider__benefit-descr
                   p= slide.desc
