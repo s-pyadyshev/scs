@@ -7989,9 +7989,9 @@ legend {
     right: 0;
     height: 100%;
     width: 35%;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #000), color-stop(0, #b5d2f0));
-    background: -o-linear-gradient(top, #000 50%, #b5d2f0 0);
-    background: linear-gradient(to bottom, #000 50%, #b5d2f0 0);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #000), color-stop(0, transparent));
+    background: -o-linear-gradient(top, #000 50%, transparent 0);
+    background: linear-gradient(to bottom, #000 50%, transparent 0);
   }
 
   .team + section {

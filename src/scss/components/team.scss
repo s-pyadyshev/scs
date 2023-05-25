@@ -18,11 +18,7 @@
       right: 0;
       height: 100%;
       width: 35%;
-      background: linear-gradient(
-        to bottom,
-        $color-black 50%,
-        $color-sky-blue 0
-      );
+      background: linear-gradient(to bottom, $color-black 50%, transparent 0);
 
       @media (min-width: 1920px) {
         width: calc(550px + (100vw - 1920px) / 2);
@@ -31,7 +27,6 @@
   }
 
   + section {
-
     @include tablet {
       padding-top: calc(
         calc(calc(100vw * 443 / 1024) / 2) + $section-padding-vertical + 60px
