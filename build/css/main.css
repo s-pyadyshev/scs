@@ -1936,6 +1936,11 @@ strong {
   margin-bottom: 0;
 }
 
+.article.article--collapsed {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .button {
   position: relative;
   display: inline-block;

@@ -111,7 +111,6 @@
 }
 
 .section-header-line {
-
   span {
     position: relative;
     display: inline-flex;
@@ -137,7 +136,6 @@
   }
 
   &--center {
-
     @include tablet {
       text-align: center;
       display: flex;

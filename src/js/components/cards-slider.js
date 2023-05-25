@@ -30,7 +30,20 @@ export const carsdSlider = (function () {
             spaceBetween: 52,
           },
         },
-        effect: "slide",
+        // on: {
+        //   slideChange: function () {
+        //     const currentIndex = swiper.activeIndex;
+        //     const currentSlideImage =
+        //       swiper.slides[currentIndex].querySelector(".card-facts__icon");
+        //     currentSlideImage.style.display = "flex";
+        //   },
+        //   beforeSlideChangeStart: function () {
+        //     const currentIndex = swiper.activeIndex;
+        //     const currentSlideImage =
+        //       swiper.slides[currentIndex].querySelector(".card-facts__icon");
+        //     currentSlideImage.style.display = "none";
+        //   },
+        // },
       });
     });
   };
