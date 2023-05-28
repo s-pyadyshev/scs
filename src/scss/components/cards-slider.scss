@@ -1,6 +1,4 @@
 .cards-slider {
-
-
   .section-companies & {
     padding-bottom: 40px;
     background-color: $color-sky-blue;
@@ -52,12 +50,10 @@
 
   &__pagination {
     position: static;
-    padding: 20px 15px 0;
+    padding: 40px 15px 0;
 
     @include laptop {
       display: none;
     }
   }
-
-
 }

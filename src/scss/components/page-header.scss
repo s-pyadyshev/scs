@@ -7,14 +7,12 @@
   background-position: 50%;
   background-size: cover;
   padding-top: 40px;
-  padding-bottom: 120px;
-  min-height: 240px;
+  min-height: 250px;
   background-color: $color-primary;
 
   @include laptop {
-    align-items: center;
     padding-top: 130px;
-    padding-bottom: 260px;
+    min-height: 595px;
   }
 
   h1 {
@@ -50,6 +48,57 @@
     @include laptop {
       height: 84px;
     }
+  }
+}
+
+.page-header-primary {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 48px 30px 18px 30px;
+
+  @include desktop {
+    padding: 136px 30px 100px;
+  }
+}
+
+.page-header-primary::after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, transparent 100%);
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.page-header-primary h2,
+.page-header-primary p {
+  text-align: center;
+  color: $color-white;
+  z-index: 2;
+  position: relative;
+  letter-spacing: 0;
+}
+
+.page-header-primary h2 {
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  font-weight: 900;
+
+  @include desktop {
+    margin-bottom: 40px;
+    font-size: 60px;
+  }
+}
+
+.page-header-primary p {
+  margin-bottom: 0;
+
+  @include desktop {
+    line-height: 26px;
   }
 }
 
@@ -115,7 +164,7 @@
   font-weight: 900;
   text-align: left;
   color: $color-white;
-  z-index: 10;
+  z-index: 2;
   position: relative;
   margin-bottom: 0;
 

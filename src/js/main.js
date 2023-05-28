@@ -12,6 +12,7 @@ import { videoVimeo } from "./components/video-vimeo";
 import "./components/gsap-animations";
 import "./components/scrollto";
 import { scrollspy } from "./components/scrollspy";
+import { sectionOverlap } from "./components/sectionOverlap";
 
 window.addEventListener(
   "load",
@@ -26,6 +27,7 @@ window.addEventListener(
     toggle.init();
     videoVimeo.init();
     scrollspy.init();
+    sectionOverlap.init();
     document.querySelector("body").classList.add("page-loaded");
   },
   false

@@ -1,54 +1,3 @@
-.page-header-primary {
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  padding: 48px 30px 18px 30px;
-
-  @include desktop {
-    padding: 136px 100px 100px;
-  }
-}
-
-.page-header-primary::after {
-  content: " ";
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, transparent 100%);
-  z-index: 5;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.page-header-primary h2,
-.page-header-primary p {
-  text-align: center;
-  color: $color-white;
-  z-index: 10;
-  position: relative;
-  letter-spacing: 0;
-}
-
-.page-header-primary h2 {
-  font-size: 32px;
-  line-height: 40px;
-  letter-spacing: 1px;
-  font-weight: 900;
-
-  @include desktop {
-    margin-bottom: 40px;
-    font-size: 60px;
-  }
-}
-
-.page-header-primary p {
-  margin-bottom: 0;
-
-  @include desktop {
-    line-height: 26px;
-  }
-}
-
 .section-job {
   background-color: $color-black;
 }
@@ -85,7 +34,7 @@
   }
 }
 
-.section-job__vacation>li {
+.section-job__vacation > li {
   padding: 40px 0;
 }
 
@@ -107,11 +56,11 @@
   list-style-type: none;
 }
 
-.section-job__vacation>li:last-child {
+.section-job__vacation > li:last-child {
   border-bottom: 1px solid $color-white;
 }
 
-.section-job__vacation>li {
+.section-job__vacation > li {
   border-top: 1px solid $color-white;
 }
 

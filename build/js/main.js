@@ -505,6 +505,58 @@ smoothScroll.init();
 
 /***/ }),
 
+/***/ "./src/js/components/sectionOverlap.js":
+/*!*********************************************!*\
+  !*** ./src/js/components/sectionOverlap.js ***!
+  \*********************************************/
+/*! exports provided: throttle, sectionOverlap */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sectionOverlap", function() { return sectionOverlap; });
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers */ "./src/js/helpers.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "throttle", function() { return _helpers__WEBPACK_IMPORTED_MODULE_0__["throttle"]; });
+
+
+var sectionOverlap = function () {
+  var init = function init() {
+    var overlapElements = document.querySelectorAll(".section-overlap");
+    if (!overlapElements.length) {
+      return;
+    }
+    function applySectionOverlap() {
+      for (var i = 0; i < overlapElements.length; i++) {
+        var overlapElement = overlapElements[i];
+        var overlapHeight = overlapElement.offsetHeight;
+        var halfHeight = overlapHeight / 2;
+        overlapElement.style.marginBottom = "-".concat(halfHeight, "px");
+        overlapElement.style.marginTop = "-".concat(halfHeight, "px");
+        var previousElement = overlapElement.previousElementSibling;
+        if (previousElement) {
+          var previousPaddingBottom = parseFloat(getComputedStyle(previousElement).paddingBottom);
+          previousElement.style.paddingBottom = previousPaddingBottom + halfHeight + "px";
+        }
+        var nextElement = overlapElement.nextElementSibling;
+        if (nextElement) {
+          var nextPaddingTop = parseFloat(getComputedStyle(nextElement).paddingTop);
+          nextElement.style.paddingTop = nextPaddingTop + halfHeight + "px";
+        }
+      }
+    }
+    applySectionOverlap();
+    var applySectionOverlapThrottle = throttle(function () {}, 200);
+    window.addEventListener("resize", function () {
+      applySectionOverlapThrottle();
+    });
+  };
+  return {
+    init: init
+  };
+}();
+
+/***/ }),
+
 /***/ "./src/js/components/slider.js":
 /*!*************************************!*\
   !*** ./src/js/components/slider.js ***!
@@ -786,8 +838,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_gsap_animations__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/gsap-animations */ "./src/js/components/gsap-animations.js");
 /* harmony import */ var _components_scrollto__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/scrollto */ "./src/js/components/scrollto.js");
 /* harmony import */ var _components_scrollspy__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/scrollspy */ "./src/js/components/scrollspy.js");
+/* harmony import */ var _components_sectionOverlap__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/sectionOverlap */ "./src/js/components/sectionOverlap.js");
 
 // import { vhFix } from "./vendor/vh-fix";
+
 
 
 
@@ -811,6 +865,7 @@ window.addEventListener("load", function () {
   _components_toggle__WEBPACK_IMPORTED_MODULE_8__["toggle"].init();
   _components_video_vimeo__WEBPACK_IMPORTED_MODULE_9__["videoVimeo"].init();
   _components_scrollspy__WEBPACK_IMPORTED_MODULE_12__["scrollspy"].init();
+  _components_sectionOverlap__WEBPACK_IMPORTED_MODULE_13__["sectionOverlap"].init();
   document.querySelector("body").classList.add("page-loaded");
 }, false);
 

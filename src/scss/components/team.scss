@@ -1,46 +1,26 @@
 .team {
-  background-color: $color-sky-blue;
+  position: relative;
+  background-image: linear-gradient(
+    to bottom,
+    $color-primary 90%,
+    transparent 0
+  );
 
   @include tablet {
-    background-color: $color-primary;
-    margin-bottom: calc((calc(calc(100vw * 443 / 1024) / -2)) - 60px);
+    background-image: linear-gradient(
+      to bottom,
+      $color-primary 70%,
+      transparent 0
+    );
   }
 
   @include desktop {
-    margin: 0;
     position: relative;
-    padding-bottom: 0;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: 35%;
-      background: linear-gradient(to bottom, $color-black 50%, transparent 0);
-
-      @media (min-width: 1920px) {
-        width: calc(550px + (100vw - 1920px) / 2);
-      }
-    }
-  }
-
-  + section {
-    @include tablet {
-      padding-top: calc(
-        calc(calc(100vw * 443 / 1024) / 2) + $section-padding-vertical + 60px
-      );
-    }
-
-    @include desktop {
-      padding-top: 80px;
-    }
-  }
-
-  &.section {
-    padding-top: 0;
-    padding-bottom: 0;
+    background-image: linear-gradient(
+      to right,
+      $color-primary 65%,
+      transparent 0
+    );
   }
 
   &__slider {
@@ -64,7 +44,12 @@
 
     .pagination {
       position: static;
-      margin-top: 20px;
+      margin-top: 40px;
+      justify-content: center;
+
+      @include tablet {
+        justify-content: flex-end;
+      }
 
       @include desktop {
         z-index: 1;
@@ -73,12 +58,7 @@
         bottom: 0;
         top: auto;
         margin-top: 0;
-        justify-content: flex-end;
       }
-    }
-
-    .pagination__link {
-      background-color: $color-sky-blue;
     }
   }
 

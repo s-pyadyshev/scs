@@ -197,6 +197,13 @@
 
     button {
       border: 1px solid $color-white;
+
+      &:focus,
+      &:hover,
+      &:active {
+        border-color: $color-primary-light;
+        color: $color-primary-light;
+      }
     }
   }
 }

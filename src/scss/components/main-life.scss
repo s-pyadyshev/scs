@@ -3,14 +3,13 @@
   z-index: 1;
 
   &.section {
-
     @include desktop {
-      padding-top: 136px;
-      padding-bottom: 126px;
+      padding-top: 130px;
+      padding-bottom: 120px;
     }
 
     @media (min-width: 1440px) {
-      padding-bottom: 248px;
+      padding-bottom: 240px;
     }
   }
 
@@ -46,7 +45,11 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(84, 84, 84, 0));
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 1),
+          rgba(84, 84, 84, 0)
+        );
       }
     }
 
