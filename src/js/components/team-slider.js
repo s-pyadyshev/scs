@@ -5,7 +5,7 @@ export const teamSlider = (function () {
     const teamSlider = new Swiper(".js-team-slider", {
       modules: [Autoplay, Pagination, EffectFade],
       autoplay: {
-        delay: 3000,
+        delay: 8000,
       },
       pagination: {
         el: ".swiper-pagination",

@@ -6254,7 +6254,40 @@ legend {
   .insights__list {
     -ms-grid-columns: 1fr 50px 1fr;
     grid-template-columns: 1fr 1fr;
+    grid-auto-flow: column;
+    -ms-grid-rows: 1fr 40px 1fr 40px 1fr;
+    grid-template-rows: repeat(3, 1fr);
     gap: 40px 50px;
+  }
+
+  .insights__list > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .insights__list > *:nth-child(2) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+
+  .insights__list > *:nth-child(3) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+
+  .insights__list > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+
+  .insights__list > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+
+  .insights__list > *:nth-child(6) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
   }
 
   .insights__text-wrap {

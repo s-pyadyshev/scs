@@ -650,7 +650,7 @@ var teamSlider = function () {
     var teamSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".js-team-slider", {
       modules: [swiper__WEBPACK_IMPORTED_MODULE_0__["Autoplay"], swiper__WEBPACK_IMPORTED_MODULE_0__["Pagination"], swiper__WEBPACK_IMPORTED_MODULE_0__["EffectFade"]],
       autoplay: {
-        delay: 3000
+        delay: 8000
       },
       pagination: {
         el: ".swiper-pagination",
