@@ -1,22 +1,21 @@
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 
 function animateBackground() {
-  const timeline = gsap.timeline({delay: 1.1});
+  const timeline = gsap.timeline({ delay: 1.1 });
 
   timeline.fromTo(
     ".welcome__background img",
     {
-      "scale": "1.5",
+      scale: "1.5",
       translateX: "-25%",
       translateY: "-25%",
-      ease: "expo.inOut"
+      ease: "expo.inOut",
     },
     {
-      "scale": "1",
+      scale: "1",
       translateX: "0",
       translateY: "0",
-      duration: 0.7
+      duration: 0.7,
     }
   );
 
@@ -25,7 +24,7 @@ function animateBackground() {
 
 function animateTitleFirst() {
   const timeline = gsap.timeline({ delay: 1.5 }),
-        firstWordTitle = document.querySelector('[data-first-title-word]');
+    firstWordTitle = document.querySelector("[data-first-title-word]");
   timeline.fromTo(
     firstWordTitle,
     {
@@ -42,7 +41,7 @@ function animateTitleFirst() {
 
 function animateTitleSecond() {
   const timeline = gsap.timeline({ delay: 1.8 }),
-        otherWordTitle = document.querySelector('[data-other-title-words]');
+    otherWordTitle = document.querySelector("[data-other-title-words]");
   timeline.fromTo(
     otherWordTitle,
     {
@@ -63,7 +62,7 @@ function animateText() {
     ".welcome__description",
     {
       y: "100%",
-      opacity: 0
+      opacity: 0,
     },
     {
       y: 0,
@@ -78,7 +77,7 @@ function animateButton() {
   timeline.fromTo(
     ".welcome__wrap .button",
     {
-      opacity: 0
+      opacity: 0,
     },
     {
       opacity: 1,
@@ -89,11 +88,13 @@ function animateButton() {
 
 function animateImg() {
   const timeline = gsap.timeline({ delay: 1.9 }),
-        mainWorkerImg = document.querySelector("[data-image-fade-in='data-image-fade-in']")
+    mainWorkerImg = document.querySelector(
+      "[data-image-fade-in='data-image-fade-in']"
+    );
   timeline.fromTo(
     mainWorkerImg,
     {
-      opacity: 0
+      opacity: 0,
     },
     {
       opacity: 1,
@@ -130,16 +131,18 @@ function animateLine() {
   );
 }
 
-const master = gsap.timeline();
+const welcomeSlider = document.querySelector(".welcome");
 
-// nest and call functions with timelines
-// add labels for better master timeline control
-master
-  .add(animateBackground())
-  .add(animateLine())
-  .add(animateTitleFirst())
-  .add(animateTitleSecond())
-  .add(animateText())
-  .add(animateButton())
-  .add(animateImg())
-  .add(animateScrollTo());
+if (welcomeSlider) {
+  const master = gsap.timeline();
+
+  master
+    .add(animateBackground())
+    .add(animateLine())
+    .add(animateTitleFirst())
+    .add(animateTitleSecond())
+    .add(animateText())
+    .add(animateButton())
+    .add(animateImg())
+    .add(animateScrollTo());
+}

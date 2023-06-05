@@ -2317,29 +2317,24 @@ legend {
   right: 0;
   top: 0;
   z-index: 10;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 30px 0;
   position: sticky;
   background-color: #1e3773;
   -webkit-box-shadow: 0 0 4px #aaa;
   box-shadow: 0 0 4px #aaa;
 }
 
-.header__inner {
+.header__inner > * {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .mobile-menu-active .header__menu {
@@ -2903,8 +2898,9 @@ legend {
 }
 
 .search {
-  position: relative;
   z-index: 4;
+  position: relative;
+  width: 100%;
 }
 
 .search__form {
@@ -3847,7 +3843,7 @@ legend {
 
 .card-job h4 {
   margin-bottom: 40px;
-  font-family: "OpenSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 2px;
@@ -3873,7 +3869,7 @@ legend {
 .card-job__unit,
 .card-job__value {
   display: inline-block;
-  font-family: "OpenSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   line-height: normal;
   font-size: 12px;
   letter-spacing: 1.2px;
@@ -3890,7 +3886,7 @@ legend {
 }
 
 .card-job p {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 300;
   font-size: 14px;
   line-height: 19px;
   color: #fff;
@@ -6790,8 +6786,9 @@ legend {
     margin-bottom: 0;
   }
 
-  .header {
-    padding: 30px 0 20px;
+  .header__inner > * {
+    padding-top: 30px;
+    padding-bottom: 20px;
   }
 
   .header__menu-toggle {

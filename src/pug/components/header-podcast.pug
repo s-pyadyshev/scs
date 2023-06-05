@@ -25,4 +25,9 @@ header.header
           +svg("menu")
         button.menu-toggle-close.js-toggle-menu(type="button")
           +svg("close")
-  +search()
+  .bar.background-secondary.text-center.hidden-lg
+    .container
+      button.button.button--inverse.text-left.full-width(type="button" data-scrollto="#apply-now")
+        span Apply Now
+        +svg('arrow-down')
+  include  ../components/podcast

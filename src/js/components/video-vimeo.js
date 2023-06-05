@@ -11,6 +11,9 @@ export const videoVimeo = (function () {
         let iframe = event.target.previousElementSibling;
         let videoOverlay =
           event.target.previousElementSibling.previousElementSibling;
+        let videoPlayerElement =
+          event.target.previousElementSibling.previousElementSibling
+            .parentElement;
         let player = new Vimeo.Player(iframe);
 
         player.play();
@@ -19,12 +22,14 @@ export const videoVimeo = (function () {
           videoOverlay.style.display = "none";
           event.target.style.display = "none";
           iframe.style.opacity = "1";
+          videoPlayerElement.classList.add("is-playing");
         });
 
         player.on("pause", () => {
           videoOverlay.style.display = "block";
           event.target.style.display = "block";
           iframe.style.opacity = "0";
+          videoPlayerElement.classList.remove("is-playing");
         });
       });
     });

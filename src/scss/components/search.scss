@@ -1,6 +1,7 @@
 .search {
-  position: relative;
   z-index: 4;
+  position: relative;
+  width: 100%;
 
   @include desktop {
     padding-top: 20px;

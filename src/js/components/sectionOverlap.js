@@ -1,4 +1,19 @@
-export { throttle } from "../helpers";
+// export { throttle } from "../helpers";
+
+function throttle(func, wait) {
+  let waiting = false;
+  return function () {
+    if (waiting) {
+      return;
+    }
+
+    waiting = true;
+    setTimeout(() => {
+      func.apply(this, arguments);
+      waiting = false;
+    }, wait);
+  };
+}
 
 export const sectionOverlap = (function () {
   const init = function () {
@@ -40,9 +55,7 @@ export const sectionOverlap = (function () {
 
     const applySectionOverlapThrottle = throttle(() => {}, 200);
 
-    window.addEventListener("resize", () => {
-      applySectionOverlapThrottle();
-    });
+    window.addEventListener("resize", applySectionOverlapThrottle);
   };
 
   return {

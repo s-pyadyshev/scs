@@ -1,4 +1,4 @@
-extends pug/base
+extends pug/base-podcast
 
 prepend vars
   - title = 'Job Advert'
@@ -7,12 +7,6 @@ append vars
   //-
 
 block content
-  .bar.background-secondary.text-center.hidden-lg
-    .container
-      button.button.button--inverse.text-left.full-width(type="button" data-scrollto="#apply-now")
-        span Apply Now
-        +svg('arrow-down')
-  include pug/components/podcast
   section.section-job-advert
     .page-header-secondary-mobile(style=`background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(./images/team2.jpg)`)
     .page-header-secondary(style=`background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, transparent 100%), url(./images/team1.jpg)`)

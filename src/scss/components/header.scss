@@ -5,22 +5,24 @@ $mobile-menu-background-color: #ccc;
   right: 0;
   top: 0;
   z-index: 10;
-  display: flex;
-  align-items: center;
-  padding: 30px 0;
   position: sticky;
   background-color: $color-primary;
   box-shadow: 0 0 4px #aaa;
-
-  @include laptop {
-    padding: 30px 0 20px;
-  }
 }
 
 .header__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  > * {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @include laptop {
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
+  }
 }
 
 .header__menu {

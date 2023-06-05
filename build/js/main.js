@@ -265,20 +265,18 @@ var carsdSlider = function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
-
 
 function animateBackground() {
   var timeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
     delay: 1.1
   });
   timeline.fromTo(".welcome__background img", {
-    "scale": "1.5",
+    scale: "1.5",
     translateX: "-25%",
     translateY: "-25%",
     ease: "expo.inOut"
   }, {
-    "scale": "1",
+    scale: "1",
     translateX: "0",
     translateY: "0",
     duration: 0.7
@@ -289,7 +287,7 @@ function animateTitleFirst() {
   var timeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
       delay: 1.5
     }),
-    firstWordTitle = document.querySelector('[data-first-title-word]');
+    firstWordTitle = document.querySelector("[data-first-title-word]");
   timeline.fromTo(firstWordTitle, {
     x: "-100%",
     opacity: 0
@@ -303,7 +301,7 @@ function animateTitleSecond() {
   var timeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
       delay: 1.8
     }),
-    otherWordTitle = document.querySelector('[data-other-title-words]');
+    otherWordTitle = document.querySelector("[data-other-title-words]");
   timeline.fromTo(otherWordTitle, {
     x: "-100%",
     opacity: 0
@@ -371,11 +369,11 @@ function animateLine() {
     duration: 1
   });
 }
-var master = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline();
-
-// nest and call functions with timelines
-// add labels for better master timeline control
-master.add(animateBackground()).add(animateLine()).add(animateTitleFirst()).add(animateTitleSecond()).add(animateText()).add(animateButton()).add(animateImg()).add(animateScrollTo());
+var welcomeSlider = document.querySelector(".welcome");
+if (welcomeSlider) {
+  var master = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline();
+  master.add(animateBackground()).add(animateLine()).add(animateTitleFirst()).add(animateTitleSecond()).add(animateText()).add(animateButton()).add(animateImg()).add(animateScrollTo());
+}
 
 /***/ }),
 
@@ -509,16 +507,29 @@ smoothScroll.init();
 /*!*********************************************!*\
   !*** ./src/js/components/sectionOverlap.js ***!
   \*********************************************/
-/*! exports provided: throttle, sectionOverlap */
+/*! exports provided: sectionOverlap */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sectionOverlap", function() { return sectionOverlap; });
-/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers */ "./src/js/helpers.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "throttle", function() { return _helpers__WEBPACK_IMPORTED_MODULE_0__["throttle"]; });
+// export { throttle } from "../helpers";
 
-
+function throttle(func, wait) {
+  var waiting = false;
+  return function () {
+    var _arguments = arguments,
+      _this = this;
+    if (waiting) {
+      return;
+    }
+    waiting = true;
+    setTimeout(function () {
+      func.apply(_this, _arguments);
+      waiting = false;
+    }, wait);
+  };
+}
 var sectionOverlap = function () {
   var init = function init() {
     var overlapElements = document.querySelectorAll(".section-overlap");
@@ -546,9 +557,7 @@ var sectionOverlap = function () {
     }
     applySectionOverlap();
     var applySectionOverlapThrottle = throttle(function () {}, 200);
-    window.addEventListener("resize", function () {
-      applySectionOverlapThrottle();
-    });
+    window.addEventListener("resize", applySectionOverlapThrottle);
   };
   return {
     init: init
@@ -639,7 +648,10 @@ __webpack_require__.r(__webpack_exports__);
 var teamSlider = function () {
   var init = function init() {
     var teamSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".js-team-slider", {
-      modules: [swiper__WEBPACK_IMPORTED_MODULE_0__["Pagination"], swiper__WEBPACK_IMPORTED_MODULE_0__["EffectFade"]],
+      modules: [swiper__WEBPACK_IMPORTED_MODULE_0__["Autoplay"], swiper__WEBPACK_IMPORTED_MODULE_0__["Pagination"], swiper__WEBPACK_IMPORTED_MODULE_0__["EffectFade"]],
+      autoplay: {
+        delay: 3000
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: "true",
@@ -651,6 +663,16 @@ var teamSlider = function () {
       effect: "fade",
       fadeEffect: {
         crossFade: true
+      },
+      on: {
+        autoplay: function autoplay() {
+          var videoElement = teamSlider.slides[teamSlider.activeIndex - 1].lastElementChild;
+          var isVideoPlaying = videoElement.classList.contains("is-playing");
+          if (isVideoPlaying) {
+            teamSlider.slidePrev();
+            teamSlider.autoplay.stop();
+          }
+        }
       }
     });
   };
@@ -716,17 +738,20 @@ var videoVimeo = function () {
       playButton.addEventListener("click", function (event) {
         var iframe = event.target.previousElementSibling;
         var videoOverlay = event.target.previousElementSibling.previousElementSibling;
+        var videoPlayerElement = event.target.previousElementSibling.previousElementSibling.parentElement;
         var player = new Vimeo.Player(iframe);
         player.play();
         player.on("play", function () {
           videoOverlay.style.display = "none";
           event.target.style.display = "none";
           iframe.style.opacity = "1";
+          videoPlayerElement.classList.add("is-playing");
         });
         player.on("pause", function () {
           videoOverlay.style.display = "block";
           event.target.style.display = "block";
           iframe.style.opacity = "0";
+          videoPlayerElement.classList.remove("is-playing");
         });
       });
     });

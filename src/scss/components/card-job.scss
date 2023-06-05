@@ -16,7 +16,7 @@
 
   h4 {
     margin-bottom: 40px;
-    font-family: $font-primary;
+    font-family: $font-secondary;
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 2px;
@@ -61,7 +61,7 @@
   &__unit,
   &__value {
     display: inline-block;
-    font-family: $font-primary;
+    font-family: $font-secondary;
     line-height: normal;
     font-size: 12px;
     letter-spacing: 1.2px;
@@ -83,7 +83,7 @@
   }
 
   p {
-    font-family: $font-secondary;
+    font-weight: 300;
     font-size: 14px;
     line-height: 19px;
     color: $color-white;
