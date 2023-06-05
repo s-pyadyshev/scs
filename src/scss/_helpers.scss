@@ -111,16 +111,15 @@
 }
 
 .section-header-line {
-  span {
+  position: relative;
+
+  > span {
     position: relative;
     display: inline-flex;
     align-items: center;
   }
 
   img {
-    display: none;
-    position: absolute;
-    left: calc(100% + 40px);
     max-width: none;
     height: 17px;
     z-index: 1;
@@ -135,6 +134,28 @@
     }
   }
 
+  &__image {
+    position: absolute;
+    left: calc(100% + 40px);
+
+    @include desktop {
+      left: calc(100% + 80px);
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      height: 6px;
+      width: 100%;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      background-color: #1eb3e7;
+      left: 100%;
+      transform: translateY(-50%);
+    }
+  }
+
   &--center {
     @include tablet {
       text-align: center;
@@ -144,7 +165,7 @@
   }
 
   &--left {
-    img {
+    .section-header-line__image {
       left: auto;
       right: calc(100% + 40px);
 
@@ -152,6 +173,10 @@
         left: auto;
         right: calc(100% + 80px);
       }
+    }
+
+    .section-header-line__image:after {
+      display: none;
     }
   }
 }
