@@ -3923,8 +3923,8 @@ legend {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 156px;
-  height: 156px;
+  width: 150px;
+  height: 150px;
   margin-bottom: 40px;
   border-radius: 50%;
   background-color: #1e3773;
@@ -6937,11 +6937,6 @@ legend {
 
   .card-company__logo > img {
     max-width: 131px;
-  }
-
-  .card-facts__icon {
-    width: 150px;
-    height: 134px;
   }
 
   .card-facts h4 {
