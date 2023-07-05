@@ -9,8 +9,7 @@ mixin life-slider(data)
           each slide in data.slides
             .swiper-slide
               if slide.about
-                .life-slider__about
-                  p= slide.about
+                .life-slider__about= slide.about
                 .life-slider__benefits
                   each benefit in slide.benefits
                     .life-slider__benefit

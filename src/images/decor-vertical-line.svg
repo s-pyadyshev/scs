@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="25.541" height="532.85" viewBox="0 0 25.541 532.85">
-  <g data-name="Group 565" fill="none" stroke="#1eb3e7" stroke-width="6">
-    <path data-name="Line 1" d="M12.771 0v510.31"/>
-    <path data-name="Path 90" d="M22.541 520.079a9.77 9.77 0 1 0-9.771 9.771 9.772 9.772 0 0 0 9.771-9.771Z"/>
-    <path data-name="Line 2" d="M24.936 346.719H12.693"/>
-    <path data-name="Line 4" d="M1.207 173.36h12.214"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="25.541" height="532.85" viewBox="0 0 25.541 532.85"><g fill="none" stroke="#1eb3e7" stroke-width="6"><path d="M12.771 0v510.31"/><path d="M22.541 520.079a9.77 9.77 0 1 0-9.771 9.771 9.772 9.772 0 0 0 9.771-9.771Z"/><path d="M24.936 346.719H12.693"/><path d="M1.207 173.36h12.214"/></g></svg>

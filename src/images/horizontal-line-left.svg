@@ -1,10 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1428.5" height="25.541" viewBox="0 0 1428.5 25.541">
-  <g data-name="Group 572">
-    <g data-name="Group 12" stroke="#1eb3e7" stroke-width="6">
-      <path data-name="Line 1" fill="none" d="M0 12.77h1405.961"/>
-      <path data-name="Path 90" d="M1415.729 3a9.77 9.77 0 1 0 9.771 9.771A9.772 9.772 0 0 0 1415.729 3Z"/>
-      <path data-name="Line 2" fill="none" d="M1242.369.605v12.243"/>
-      <path data-name="Line 4" fill="none" d="M1069.01 24.334V12.12"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1428.5" height="25.541" viewBox="0 0 1428.5 25.541"><g><g stroke="#1eb3e7" stroke-width="6"><path fill="none" d="M0 12.77h1405.961"/><path d="M1415.729 3a9.77 9.77 0 1 0 9.771 9.771A9.772 9.772 0 0 0 1415.729 3Z" fill="transparent"/><path fill="none" d="M1242.369.605v12.243"/><path fill="none" d="M1069.01 24.334V12.12"/></g></g></svg>

@@ -4337,6 +4337,11 @@ legend {
   object-fit: cover;
 }
 
+.life-slider__about {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
 .life-slider__benefits {
   margin-bottom: 30px;
 }
@@ -7907,7 +7912,7 @@ legend {
     padding: 40px 50px 50px 77px;
   }
 
-  .life-slider__about p {
+  .life-slider__about {
     margin-bottom: 30px;
   }
 
