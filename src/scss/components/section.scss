@@ -6,6 +6,10 @@
     padding-top: $section-padding-vertical-desktop;
     padding-bottom: $section-padding-vertical-desktop;
   }
+
+  &#location {
+    min-height: 75vh;
+  }
 }
 
 .section-sm {

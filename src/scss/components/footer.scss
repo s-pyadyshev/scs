@@ -68,7 +68,11 @@
   }
 
   &__logo {
-    margin-bottom: 22px;
+    margin-bottom: 50px;
+
+    @include desktop {
+      margin-bottom: 22px;
+    }
 
     .logo {
       display: block;
