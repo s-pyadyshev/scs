@@ -2369,9 +2369,7 @@ legend {
   font-size: 14px;
   line-height: 20px;
   padding: 9px 11px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #ededed;
+  border: 1px solid #ededed;
   border-radius: 0px;
   background-color: #fff;
   color: #1e3773;
@@ -3168,11 +3166,13 @@ legend {
 }
 
 .select-area input:focus,
+.select-area input:hover,
 .select-area input:active {
   border-color: #1e3773;
 }
 
 .select-area input:focus ~ .select ~ .fsb-select,
+.select-area input:hover ~ .select ~ .fsb-select,
 .select-area input:active ~ .select ~ .fsb-select {
   border-color: #1e3773;
 }
@@ -3181,7 +3181,6 @@ legend {
   min-width: 136px;
   background-color: #fff;
   border-radius: 0;
-  border: 1px solid #ededed;
   width: 100%;
   -webkit-transition-property: border-color;
   -o-transition-property: border-color;
@@ -6031,6 +6030,7 @@ legend {
   .select-area .select ~ .fsb-select {
     width: auto;
     min-width: 118px;
+    border: 1px solid #ededed;
     border-left: none;
   }
 

@@ -12,9 +12,8 @@
     &:focus,
     &:hover,
     &:active {
-
       input,
-      .select~.fsb-select {
+      .select ~ .fsb-select {
         border-color: $color-primary;
       }
     }
@@ -52,10 +51,11 @@
     }
 
     &:focus,
+    &:hover,
     &:active {
       border-color: $color-primary;
 
-      &~.select~.fsb-select {
+      & ~ .select ~ .fsb-select {
         border-color: $color-primary;
       }
     }
@@ -70,11 +70,10 @@
     }
   }
 
-  .select~.fsb-select {
+  .select ~ .fsb-select {
     min-width: 136px;
     background-color: $color-white;
     border-radius: 0;
-    border: 1px solid $color-muted;
     width: 100%;
     transition-property: border-color;
     transition-duration: $transition-duration;
@@ -86,6 +85,7 @@
     @include tablet {
       width: auto;
       min-width: 118px;
+      border: 1px solid $color-muted;
       border-left: none;
     }
 
@@ -134,7 +134,7 @@
         @include tablet {
           right: 10px;
         }
-        
+
         @include desktop {
           right: 20px;
         }
